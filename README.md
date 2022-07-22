@@ -1,2 +1,0 @@
-# ipfs-dashboard
-IPFS Dashboard

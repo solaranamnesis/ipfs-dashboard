@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://solaranamnesis.com/</loc>
+  <lastmod>2022-02-20T03:44:40+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index.html</loc>
+  <lastmod>2022-02-20T03:44:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-de.html</loc>
+  <lastmod>2022-02-20T03:44:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-fr.html</loc>
+  <lastmod>2022-02-20T03:44:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-ja.html</loc>
+  <lastmod>2022-02-20T03:44:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-it.html</loc>
+  <lastmod>2022-02-20T03:44:49+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-ru.html</loc>
+  <lastmod>2022-02-20T03:44:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-zh.html</loc>
+  <lastmod>2022-02-20T03:44:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-he.html</loc>
+  <lastmod>2022-02-20T03:34:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-th.html</loc>
+  <lastmod>2022-02-20T03:44:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-vi.html</loc>
+  <lastmod>2022-02-20T03:44:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-ar.html</loc>
+  <lastmod>2022-02-20T03:44:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-hi.html</loc>
+  <lastmod>2022-02-20T03:44:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://solaranamnesis.com/index-es.html</loc>
+  <lastmod>2022-02-20T03:44:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</urlset>
