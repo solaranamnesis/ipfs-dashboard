@@ -19,3 +19,4 @@
 [Bengali (বাংলা)](https://solaranamnesis.com/index-bn.html)  
 [Punjabi (ਪੰਜਾਬੀ)](https://solaranamnesis.com/index-pa.html)  
 [Persian (فارسی)](https://solaranamnesis.com/index-fa.html)  
+[Kiswahili](https://solaranamnesis.com/index-sw.html)  
