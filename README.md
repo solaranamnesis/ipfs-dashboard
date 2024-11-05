@@ -20,3 +20,4 @@
 [Punjabi (ਪੰਜਾਬੀ)](https://solaranamnesis.com/index-pa.html)  
 [Persian (فارسی)](https://solaranamnesis.com/index-fa.html)  
 [Kiswahili](https://solaranamnesis.com/index-sw.html)  
+[Bahasa Indonesia](https://solaranamnesis.com/index-id.html)  
