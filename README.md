@@ -23,3 +23,4 @@
 [Bahasa Indonesia](https://solaranamnesis.com/index-id.html)  
 [Język Polski](https://solaranamnesis.com/index-pl.html)  
 [Nederlands](https://solaranamnesis.com/index-nl.html)  
+[Svenska](https://solaranamnesis.com/index-sv.html)  
