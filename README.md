@@ -24,3 +24,5 @@
 [Język Polski](https://solaranamnesis.com/index-pl.html)  
 [Nederlands](https://solaranamnesis.com/index-nl.html)  
 [Svenska](https://solaranamnesis.com/index-sv.html)  
+[Turkish (Türkçe)](https://solaranamnesis.com/index-tr.html)  
+[Magyar](https://solaranamnesis.com/index-hu.html)  
