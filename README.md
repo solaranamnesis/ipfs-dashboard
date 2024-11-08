@@ -22,3 +22,4 @@
 [Kiswahili](https://solaranamnesis.com/index-sw.html)  
 [Bahasa Indonesia](https://solaranamnesis.com/index-id.html)  
 [Język Polski](https://solaranamnesis.com/index-pl.html)  
+[Nederlands](https://solaranamnesis.com/index-nl.html)  
