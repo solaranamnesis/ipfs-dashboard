@@ -94,7 +94,7 @@
     }
 
     .navbar-brand img {
-        max-width: 80%; /* Scale down logo */
+        max-width: 70%; /* Scale down logo */
         height: auto;
     }
 
@@ -111,4 +111,11 @@
     }
 
     /* Additional styles as needed */
+}
+
+@media (max-width: 1080px) {
+    .navbar-brand img {
+        max-width: 80%; /* Scale down logo */
+        height: auto;
+    }
 }
