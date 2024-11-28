@@ -87,3 +87,28 @@
 /*	10. FONT SIZES
 /*-----------------------------------------------------------------------------------*/
 .fs-30{font-size:30px}.fs-32{font-size:32px}.fs-34{font-size:34px}.fs-36{font-size:36px}.fs-38{font-size:38px}.fs-40{font-size:40px}.fs-42{font-size:42px}.fs-44{font-size:44px}.fs-46{font-size:46px}.fs-48{font-size:48px}.fs-50{font-size:50px}.fs-52{font-size:52px}.fs-54{font-size:54px}.fs-56{font-size:56px}.fs-58{font-size:58px}.fs-60{font-size:60px}
+
+@media (max-width: 480px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    .navbar-brand img {
+        max-width: 80%; /* Scale down logo */
+        height: auto;
+    }
+
+    .btn {
+        width: 100%; /* Full-width buttons */
+    }
+
+    .heading {
+        font-size: 1.5em; /* Adjust heading size */
+    }
+
+    .lead {
+        font-size: 1em; /* Adjust paragraph size */
+    }
+
+    /* Additional styles as needed */
+}
