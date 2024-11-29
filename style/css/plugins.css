@@ -122,6 +122,6 @@
 
 @media (min-width: 1081px) {
     .navbar-brand img {
-        max-width: fit-content;
+        max-width: fit-content !important;
     }
 }
