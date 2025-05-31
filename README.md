@@ -28,3 +28,4 @@
 [Magyar](https://solaranamnesis.com/index-hu.html)  
 [Nepal Bhasa (𑐣𑐾𑐥𑐵𑐮 𑐨𑐵𑐲𑐵)](https://solaranamnesis.com/index-new.html)  
 [Lhasa Tibetan (ལྷ་སའི་སྐད་)](https://solaranamnesis.com/index-bo.html)  
+[Tamil (தமிழ்)](https://solaranamnesis.com/index-ta.html)  
