@@ -1922,3 +1922,4 @@ form [class*="col-"]{padding-left:15px !important;padding-right:15px !important;
 }
 @media (min-width:1200px){.modal-dialog{max-width:1140px;}
 }
+.bg-image{background-color: #000000;background-size: cover;background-position: center;}
