@@ -31,5 +31,5 @@
 [Sinhala (සිංහල)](https://www.solaranamnesis.com/index-si.html)  
 [Tamil (தமிழ்)](https://www.solaranamnesis.com/index-ta.html)  
 [Odia (ଓଡ଼ିଆ)](https://www.solaranamnesis.com/index-or.html)  
-[Armenian (Հայերեն)](https://www.solaranamnesis.com/index-hy.html) 
+[Armenian (Հայերեն)](https://www.solaranamnesis.com/index-hy.html)  
 [Tagalog](https://www.solaranamnesis.com/index-tl.html)  
