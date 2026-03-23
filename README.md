@@ -32,3 +32,7 @@
 [Tamil (தமிழ்)](https://www.solaranamnesis.com/index-ta.html)  
 [Odia (ଓଡ଼ିଆ)](https://www.solaranamnesis.com/index-or.html)  
 [Armenian (Հայերեն)](https://www.solaranamnesis.com/index-hy.html) 
+
+IPFS Mirror:
+
+[IPNS hash k51qzi5uqu5dkr14dcifrhtn2jpqndw7pgyvgsxk5v9iq6y7ln9udh48trq5le](https://dweb.link/ipns/k51qzi5uqu5dkr14dcifrhtn2jpqndw7pgyvgsxk5v9iq6y7ln9udh48trq5le/]
