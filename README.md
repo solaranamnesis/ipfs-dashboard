@@ -35,4 +35,4 @@
 
 IPFS Mirror:
 
-[IPNS hash k51qzi5uqu5dkr14dcifrhtn2jpqndw7pgyvgsxk5v9iq6y7ln9udh48trq5le](https://dweb.link/ipns/k51qzi5uqu5dkr14dcifrhtn2jpqndw7pgyvgsxk5v9iq6y7ln9udh48trq5le/]
+[IPNS hash k51qzi5uqu5dkr14dcifrhtn2jpqndw7pgyvgsxk5v9iq6y7ln9udh48trq5le](https://dweb.link/ipns/k51qzi5uqu5dkr14dcifrhtn2jpqndw7pgyvgsxk5v9iq6y7ln9udh48trq5le/)
