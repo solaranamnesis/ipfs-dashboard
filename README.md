@@ -31,7 +31,18 @@
 [Sinhala (සිංහල)](https://www.solaranamnesis.com/index-si.html)  
 [Tamil (தமிழ்)](https://www.solaranamnesis.com/index-ta.html)  
 [Odia (ଓଡ଼ିଆ)](https://www.solaranamnesis.com/index-or.html)  
-[Armenian (Հայերեն)](https://www.solaranamnesis.com/index-hy.html) 
+[Armenian (Հայերեն)](https://www.solaranamnesis.com/index-hy.html)  
+[Tagalog](https://www.solaranamnesis.com/index-tl.html)  
+[Georgian (ქართული)](https://www.solaranamnesis.com/index-ka.html)  
+[Amharic (አማርኛ)](https://www.solaranamnesis.com/index-am.html)  
+[Kannada (ಕನ್ನಡ)](https://www.solaranamnesis.com/index-kn.html)  
+[Yoruba (Yorùbá)](https://www.solaranamnesis.com/index-yo.html)  
+[Gujarati (ગુજરાતી)](https://www.solaranamnesis.com/index-gu.html)  
+[Hausa](https://www.solaranamnesis.com/index-ha.html)  
+[Javanese](https://www.solaranamnesis.com/index-jv.html)  
+[Urdu (اردو)](https://www.solaranamnesis.com/index-ur.html)  
+[Telugu (తెలుగు)](https://www.solaranamnesis.com/index-te.html)  
+[Marathi (मराठी)](https://www.solaranamnesis.com/index-mr.html)  
 
 IPFS Mirror:
 
