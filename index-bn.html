@@ -107,6 +107,34 @@
 
       /* Additional styles as needed */
     }
+
+    .about-toggle {
+      display: block;
+      text-align: center;
+      padding: 8px 0;
+      background: #f8f9fa;
+      font-size: 0.95em;
+      color: #555;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .about-toggle:focus {
+      outline: 2px solid #aaa;
+      outline-offset: -2px;
+    }
+
+    .about-toggle .about-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .about-toggle[aria-expanded="true"] .about-arrow {
+      transform: rotate(180deg);
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -552,8 +580,18 @@
         </div>
       </nav>
     </header>
+    <button class=about-toggle data-toggle=collapse data-target="#about-collapse" aria-expanded=false aria-controls=about-collapse aria-label="সম্পর্কে বিভাগের দৃশ্যমানতা টগল করুন">সম্পর্কে <span class=about-arrow>&#9660;</span></button>
     <main>
       <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Solar Anamnesis — উল্কাপিণ্ড পাতলা সেকশন গিগাপিক্সেল মাইক্রোফোটোগ্রাফি গ্যালারি</h1>
+      <section id=about-collapse class=collapse aria-label="উল্কাপিণ্ড পাতলা অনুচ্ছেদ সংগ্রহ সম্পর্কে">
+        <div class="wrapper" style="padding: 50px 0; background: #f8f9fa;">
+          <div class="container text-center">
+            <h2 class=heading>উল্কাপিণ্ড পাতলা অনুচ্ছেদের গিগাপিক্সেল ফটোগ্রাফি</h2>
+            <p class="lead larger" style="max-width:800px; margin: 1em auto;">Solar Anamnesis হল উচ্চ রেজোলিউশন গিগাপিক্সেল মোজাইকের একটি সংগ্রহ যা পলিশ করা উল্কাপিণ্ডের পাতলা অনুচ্ছেদগুলির, যা ক্রস-পোলারাইজড লাইট (XPL) এবং দৃশ্যমান আলোর অধীনে পেট্রোগ্রাফিক মাইক্রোস্কোপ ব্যবহার করে ফটোগ্রাফ করা হয়েছিল। প্রতিটি ছবি কয়েক শত ফ্রেমের একটি মোজাইক যা একক নেভিগেবল গিগাপিক্সেল প্যানোরামায় সেলাই করা হয়েছে।</p>
+            <p class=lead style="max-width:800px; margin: 1em auto;">সংগ্রহটি সমস্ত প্রধান উল্কাপিণ্ড শ্রেণীকে কভার করে: সাধারণ চন্ড্রাইটস (H, L, LL), কার্বনaceous চন্ড্রাইটস (CV, CM, CO, CR, CK, CH), এনস্ট্যাটাইট চন্ড্রাইটস, রুমুরুতি চন্ড্রাইটস, মঙ্গল গ্রহের উল্কাপিণ্ড (শেরগটাইটস), চাঁদের উল্কাপিণ্ড, অ্যাকন্ড্রাইটস (HED, অ্যাংরাইটস, অ্যাব্রাইটস, ইউরেলাইটস, অ্যাকাপুলকোইটস, লোড্রানাইটস, ব্রাচিনাইটস), প্যাল্লাসাইটস, মেসোসাইডরাইটস এবং আয়রনস। উল্লেখযোগ্য নমুনাগুলির মধ্যে রয়েছে Allende, Murchison, Chelyabinsk, Tissint, Zagami, Ozerki এবং Pasamonte।</p>
+          </div>
+        </div>
+      </section>
       <section aria-label="ফটোগ্রাফি ব্লগ">
         <div class="wrapper image-wrapper h-100-less bg-image inverse-text box-shadow" style="background-image: url('style/images/art/NWA10646.webp');">
           <div class="container-fluid h-100">

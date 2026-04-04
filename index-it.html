@@ -107,6 +107,34 @@
 
       /* Additional styles as needed */
     }
+
+    .about-toggle {
+      display: block;
+      text-align: center;
+      padding: 8px 0;
+      background: #f8f9fa;
+      font-size: 0.95em;
+      color: #555;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .about-toggle:focus {
+      outline: 2px solid #aaa;
+      outline-offset: -2px;
+    }
+
+    .about-toggle .about-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .about-toggle[aria-expanded="true"] .about-arrow {
+      transform: rotate(180deg);
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -553,8 +581,18 @@
         </div>
       </nav>
     </header>
+    <button class=about-toggle data-toggle=collapse data-target="#about-collapse" aria-expanded=false aria-controls=about-collapse aria-label="Mostra/nascondi sezione Informazioni">Informazioni <span class=about-arrow>&#9660;</span></button>
     <main>
       <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Solar Anamnesis — Galleria Gigapixel di Microfotografia di Sezioni Sottili di Meteoriti</h1>
+      <section id=about-collapse class=collapse aria-label="Informazioni sulla Collezione di Sezioni Sottili di Meteoriti">
+        <div class="wrapper" style="padding: 50px 0; background: #f8f9fa;">
+          <div class="container text-center">
+            <h2 class=heading>Fotografia Gigapixel di Sezioni Sottili di Meteoriti</h2>
+            <p class="lead larger" style="max-width:800px; margin: 1em auto;">Solar Anamnesis è una collezione di mosaici gigapixel ad alta risoluzione di sezioni sottili di meteoriti lucidate, fotografate sotto luce polarizzata incrociata (XPL) e luce visibile utilizzando un microscopio petrografico. Ogni immagine è un mosaico di diverse centinaia di fotogrammi assemblati in un unico panorama navigabile da diversi gigapixel.</p>
+            <p class=lead style="max-width:800px; margin: 1em auto;">La collezione copre tutte le principali classi di meteoriti: condriti ordinarie (H, L, LL), condriti carbonacee (CV, CM, CO, CR, CK, CH), condriti a enstatite, condriti di Rumuruti, meteoriti marziani (shergottiti), meteoriti lunari, acondriti (HED, angriti, aubriti, ureiliti, acapulcoiti, lodraniti, brachiniti), pallasiti, mesosideriti e meteoriti ferrosi. I campioni notevoli includono Allende, Murchison, Chelyabinsk, Tissint, Zagami, Ozerki e Pasamonte.</p>
+          </div>
+        </div>
+      </section>
       <section aria-label="Blog di fotografia">
         <div class="wrapper image-wrapper h-100-less bg-image inverse-text box-shadow" style="background-image: url('style/images/art/NWA10646.webp');">
           <div class="container-fluid h-100">

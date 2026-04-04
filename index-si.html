@@ -107,6 +107,34 @@
 
       /* Additional styles as needed */
     }
+
+    .about-toggle {
+      display: block;
+      text-align: center;
+      padding: 8px 0;
+      background: #f8f9fa;
+      font-size: 0.95em;
+      color: #555;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .about-toggle:focus {
+      outline: 2px solid #aaa;
+      outline-offset: -2px;
+    }
+
+    .about-toggle .about-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .about-toggle[aria-expanded="true"] .about-arrow {
+      transform: rotate(180deg);
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -552,8 +580,18 @@
         </div>
       </nav>
     </header>
+    <button class=about-toggle data-toggle=collapse data-target="#about-collapse" aria-expanded=false aria-controls=about-collapse aria-label="ගැන කොටස දෘශ්‍යතාව ටොගල් කරන්න">ගැන <span class=about-arrow>&#9660;</span></button>
     <main>
       <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Solar Anamnesis - උල්කාපාත තුනී කොටස් සහ ගිගාපික්සල් ඡායාරූපකරණය</h1>
+      <section id=about-collapse class=collapse aria-label="ග්‍රහක තනි කැබලි එකතුව ගැන">
+        <div class="wrapper" style="padding: 50px 0; background: #f8f9fa;">
+          <div class="container text-center">
+            <h2 class=heading>ග්‍රහක තනි කැබලි ගිගාපික්සල් ඡායාරූපකරණය</h2>
+            <p class="lead larger" style="max-width:800px; margin: 1em auto;">Solar Anamnesis යනු පර්වත විද්‍යාත්මක සියුම් දෘශ්‍ය අන්වීක්ෂයක් භාවිතා කර හරස් ධ්‍රැවීකරණ ආලෝකය (XPL) සහ දෘශ්‍ය ආලෝකය යටතේ ඡායාරූප ගන්නා පොලිස් කළ ග්‍රහක තනි කැබලිවල ඉහළ විභේදනය සහිත ගිගාපික්සල් මොසායික් එකතුවකි. සෑම රූපයක්ම එක් නැවුම් ගිගාපික්සල් පැනෝරාමාවක් බවට缝න ලද සෙවනැල්ල රාමු සිය ගණනකින් සමන්විත මොසායික් එකකි.</p>
+            <p class=lead style="max-width:800px; margin: 1em auto;">එකතුව මුල් ග්‍රහක වර්ග සියල්ලම ආවරණය කරයි: සාමාන්‍ය කොන්ඩ්‍රයිට් (H, L, LL), කාබනික කොන්ඩ්‍රයිට් (CV, CM, CO, CR, CK, CH), එන්ස්ටැටයිට් කොන්ඩ්‍රයිට්, රුමුරුටි කොන්ඩ්‍රයිට්, අඟහරු ග්‍රහක (ශර්ගොටයිට්), චන්ද්‍ර ග්‍රහක, ඇකොන්ඩ්‍රයිට් (HED, ඇන්ග්‍රයිට්, ඔබ්‍රයිට්, යූරෙයිලයිට්, ඇකපුල්කොයිට්, ලොඩ්‍රානයිට්, බ්‍රැකිනයිට්), පැලසයිට්, මෙසොසයිඩරයිට් සහ යකඩ ග්‍රහක. සැලකිය යුතු නිදසුන් වලට Allende, Murchison, Chelyabinsk, Tissint, Zagami, Ozerki සහ Pasamonte ඇතුළත් වේ.</p>
+          </div>
+        </div>
+      </section>
       <section aria-label="ඡායාරූපකරණ බ්ලොගය">
         <div class="wrapper image-wrapper h-100-less bg-image inverse-text box-shadow" style="background-image: url('style/images/art/NWA10646.webp');">
           <div class="container-fluid h-100">
