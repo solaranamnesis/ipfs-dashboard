@@ -106,6 +106,34 @@
 
       /* Additional styles as needed */
     }
+
+    .about-toggle {
+      display: block;
+      text-align: center;
+      padding: 8px 0;
+      background: #f8f9fa;
+      font-size: 0.95em;
+      color: #555;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .about-toggle:focus {
+      outline: 2px solid #aaa;
+      outline-offset: -2px;
+    }
+
+    .about-toggle .about-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .about-toggle[aria-expanded="true"] .about-arrow {
+      transform: rotate(180deg);
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -550,8 +578,18 @@
         </div>
       </nav>
     </header>
+    <button class=about-toggle data-toggle=collapse data-target="#about-collapse" aria-expanded=false aria-controls=about-collapse aria-label="切换关于部分可见性">关于 <span class=about-arrow>&#9660;</span></button>
     <main>
       <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Solar Anamnesis — 陨石薄片千亿像素显微摄影画廊</h1>
+      <section id=about-collapse class=collapse aria-label="关于陨石薄片收藏">
+        <div class="wrapper" style="padding: 50px 0; background: #f8f9fa;">
+          <div class="container text-center">
+            <h2 class=heading>陨石薄片千兆像素摄影</h2>
+            <p class="lead larger" style="max-width:800px; margin: 1em auto;">Solar Anamnesis 是一个使用岩相显微镜在正交偏光（XPL）和可见光下拍摄的高分辨率千兆像素抛光陨石薄片马赛克合集。每张图像都是由数百帧拼接而成的单一可导航千兆像素全景图。</p>
+            <p class=lead style="max-width:800px; margin: 1em auto;">该合集涵盖所有主要陨石类别：普通球粒陨石（H、L、LL）、碳质球粒陨石（CV、CM、CO、CR、CK、CH）、顽辉石球粒陨石、R型球粒陨石、火星陨石（辉玻无球粒陨石）、月球陨石、无球粒陨石（HED、钛辉无球粒陨石、顽辉无球粒陨石、橄榄无球粒陨石、橄辉无球粒陨石、铁镍陨石、橄榄古铜无球粒陨石）、橄榄陨铁、中铁陨石和铁陨石。著名标本包括阿连德、默奇森、车里雅宾斯克、提辛特、扎加米、奥泽尔基和帕萨蒙特。</p>
+          </div>
+        </div>
+      </section>
       <section aria-label="摄影博客">
         <div class="wrapper image-wrapper h-100-less bg-image inverse-text box-shadow" style="background-image: url('style/images/art/NWA10646.webp');">
           <div class="container-fluid h-100">

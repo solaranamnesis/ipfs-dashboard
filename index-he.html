@@ -124,6 +124,34 @@
 
       /* Additional styles as needed */
     }
+
+    .about-toggle {
+      display: block;
+      text-align: center;
+      padding: 8px 0;
+      background: #f8f9fa;
+      font-size: 0.95em;
+      color: #555;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .about-toggle:focus {
+      outline: 2px solid #aaa;
+      outline-offset: -2px;
+    }
+
+    .about-toggle .about-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .about-toggle[aria-expanded="true"] .about-arrow {
+      transform: rotate(180deg);
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -569,8 +597,18 @@
         </div>
       </nav>
     </header>
+    <button class=about-toggle data-toggle=collapse data-target="#about-collapse" aria-expanded=false aria-controls=about-collapse aria-label="הצג/הסתר את קטע אודות">אודות <span class=about-arrow>&#9660;</span></button>
     <main>
       <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Solar Anamnesis — גלריית מיקרופוטוגרפיה גיגה-פיקסל של חתכים דקים של מטאוריטים</h1>
+      <section id=about-collapse class=collapse aria-label="אודות אוסף שקפי המטאוריטים">
+        <div class="wrapper" style="padding: 50px 0; background: #f8f9fa;">
+          <div class="container text-center">
+            <h2 class=heading>צילום גיגה-פיקסל של שקפי מטאוריטים</h2>
+            <p class="lead larger" style="max-width:800px; margin: 1em auto;">Solar Anamnesis היא אוסף של פסיפסי גיגה-פיקסל ברזולוציה גבוהה של שקפים דקים מלוטשים של מטאוריטים, שצולמו תחת אור מקוטב מוצלב (XPL) ואור נראה באמצעות מיקרוסקופ פטרוגרפי. כל תמונה היא פסיפס של מאות מסגרות שנתפרו לפנורמת גיגה-פיקסל יחידה הניתנת לניווט.</p>
+            <p class=lead style="max-width:800px; margin: 1em auto;">האוסף מקיף את כל מחלקות המטאוריטים העיקריות: כונדריטים רגילים (H, L, LL), כונדריטים פחמניים (CV, CM, CO, CR, CK, CH), כונדריטים אנסטטיטיים, כונדריטים מסוג רומורוטי, מטאוריטים מאדים (שרגוטיטים), מטאוריטים ירחיים, אכונדריטים (HED, אנגריטים, אובריטים, אורליטים, אקפולקואיטים, לודרניטים, ברכיניטים), פלסיטים, מזוסידריטים ומטאוריטי ברזל. דגימים בולטים כוללים את אלנדה, מורצ'יסון, צ'ליאבינסק, טיסינט, זגאמי, אוזרקי ופסמונטה.</p>
+          </div>
+        </div>
+      </section>
       <section aria-label="בלוג צילום">
         <div class="wrapper image-wrapper h-100-less bg-image inverse-text box-shadow" style="background-image: url('style/images/art/NWA10646.webp');">
           <div class="container-fluid h-100">

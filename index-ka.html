@@ -107,6 +107,34 @@
 
       /* Additional styles as needed */
     }
+
+    .about-toggle {
+      display: block;
+      text-align: center;
+      padding: 8px 0;
+      background: #f8f9fa;
+      font-size: 0.95em;
+      color: #555;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .about-toggle:focus {
+      outline: 2px solid #aaa;
+      outline-offset: -2px;
+    }
+
+    .about-toggle .about-arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .about-toggle[aria-expanded="true"] .about-arrow {
+      transform: rotate(180deg);
+    }
   </style>
   <script type="application/ld+json">
     {
@@ -553,8 +581,18 @@
         </div>
       </nav>
     </header>
+    <button class=about-toggle data-toggle=collapse data-target="#about-collapse" aria-expanded=false aria-controls=about-collapse aria-label="გადართეთ შესახებ განყოფილების ხილვადობა">შესახებ <span class=about-arrow>&#9660;</span></button>
     <main>
       <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Solar Anamnesis — Meteorite Thin Section Gigapixel Microphotography</h1>
+      <section id=about-collapse class=collapse aria-label="მეტეორიტების თხელი კვეთების კოლექციის შესახებ">
+        <div class="wrapper" style="padding: 50px 0; background: #f8f9fa;">
+          <div class="container text-center">
+            <h2 class=heading>მეტეორიტების თხელი კვეთების გიგაპიქსელური ფოტოგრაფია</h2>
+            <p class="lead larger" style="max-width:800px; margin: 1em auto;">Solar Anamnesis არის მაღალი გარჩევადობის გიგაპიქსელური მოზაიკების კოლექცია, რომლებიც გადაღებულია პოლირებული მეტეორიტების თხელი კვეთებიდან ჯვარედინად პოლარიზებულ სინათლეში (XPL) და ხილულ სინათლეში პეტროგრაფიული მიკროსკოპის გამოყენებით. თითოეული სურათი ასობით კადრისგან შემდგარი მოზაიკაა, რომელიც ჩაკერებულია ერთ სახელმძღვანელო გიგაპიქსელურ პანორამაში.</p>
+            <p class=lead style="max-width:800px; margin: 1em auto;">კოლექცია მოიცავს ყველა მთავარ მეტეორიტის კლასს: ჩვეულებრივი ქონდრიტები (H, L, LL), ნახშირბადოვანი ქონდრიტები (CV, CM, CO, CR, CK, CH), ენსტატიტის ქონდრიტები, რუმურუტის ქონდრიტები, მარსის მეტეორიტები (შერგოტიტები), მთვარის მეტეორიტები, აქონდრიტები (HED, ანგრიტები, აუბრიტები, ურეილიტები, აკაპულკოიტები, ლოდრანიტები, ბრახინიტები), პალასიტები, მეზოსიდერიტები და რკინის მეტეორიტები. აღსანიშნავი ნიმუშებია: Allende, Murchison, Chelyabinsk, Tissint, Zagami, Ozerki და Pasamonte.</p>
+          </div>
+        </div>
+      </section>
       <section aria-label="მეტეორიტის თხელი კვეთის ფოტოგრაფიის ბლოგი">
         <div class="wrapper image-wrapper h-100-less bg-image inverse-text box-shadow" style="background-image: url('style/images/art/NWA10646.webp');">
           <div class="container-fluid h-100">
