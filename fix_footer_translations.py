@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'id', 'pl', 'nl', 'sv',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'gu', 'ha', 'jv', 'ur', 'te', 'mr', 'la', 'eu', 'fi'
+    'yo', 'gu', 'ha', 'jv', 'ur', 'te', 'mr', 'la', 'eu', 'fi', 'mn'
 ]
 
 def get_href(lang):
@@ -104,6 +104,7 @@ def build_translations(ns):
         'la': 'लॅटिन',
         'eu': 'बास्क',
         'fi': 'फिन्निश',
+        'mn': 'मंगोलियन (Latin)',
     }
 
     t['gu'] = {
@@ -153,6 +154,7 @@ def build_translations(ns):
         'la': 'લૅટિન',
         'eu': 'Euskara',
         'fi': 'ફિનિश',
+        'mn': 'મોંગોલિયન (Latin)',
     }
 
     t['ha'] = {
@@ -202,6 +204,7 @@ def build_translations(ns):
         'la': 'Latinci',
         'eu': 'Euskara',
         'fi': 'Faransancin Finnish',
+        'mn': 'Mongoliyanci (Latin)',
     }
 
     t['ka'] = {
@@ -251,6 +254,7 @@ def build_translations(ns):
         'la': 'ლათინური',
         'eu': 'ბასკური',
         'fi': 'ფინური',
+        'mn': 'მონღოლური (Latin)',
     }
 
     t['am'] = {
@@ -300,6 +304,7 @@ def build_translations(ns):
         'la': 'ላቲን',
         'eu': 'Euskara',
         'fi': 'ፊኒሽ',
+        'mn': 'ሞንጎሊያኛ (Latin)',
     }
 
     t['kn'] = {
@@ -349,6 +354,7 @@ def build_translations(ns):
         'la': 'ಲ್ಯಾಟಿನ್',
         'eu': 'ಬಾಸ್ಕ್',
         'fi': 'ಫಿನ್ನಿಶ್',
+        'mn': 'ಮಂಗೋಲಿಯನ್ (Latin)',
     }
 
     t['te'] = {
@@ -398,6 +404,7 @@ def build_translations(ns):
         'la': 'లాటిన్',
         'eu': 'Euskara',
         'fi': 'ఫిన్నిష్',
+        'mn': 'మంగోలియన్ (Latin)',
     }
 
     t['tl'] = {
@@ -447,6 +454,7 @@ def build_translations(ns):
         'la': 'Latin',
         'eu': 'Euskara',
         'fi': 'Finlandes',
+        'mn': 'Mongolian (Latin)',
     }
 
     t['yo'] = {
@@ -496,6 +504,7 @@ def build_translations(ns):
         'la': 'Èdè Látìnì',
         'eu': 'Euskara',
         'fi': 'Èdè Finnish',
+        'mn': 'Mongólíà (Latin)',
     }
 
 
@@ -546,6 +555,7 @@ def build_translations(ns):
         'la': 'Latina',
         'eu': 'Euskara',
         'fi': 'Finnice',
+        'mn': 'Mongolica (Latina)',
     }
 
     # Finnish (fi) - full translations of all language names in Finnish
@@ -596,6 +606,7 @@ def build_translations(ns):
         'la': 'Latina',
         'eu': 'Euskara',
         'fi': 'Suomi',
+        'mn': 'Mongoli (Latin)',
     }
 
     # =========== PARTIAL REPLACEMENTS ===========
@@ -612,6 +623,7 @@ def build_translations(ns):
         'la': 'اللاتينية',
         'eu': 'Euskara',
         'fi': 'الفنلندية',
+        'mn': 'المنغولية (Latin)',
     }
 
     # Bengali (bn)
@@ -626,6 +638,7 @@ def build_translations(ns):
         'la': 'লাটিন',
         'eu': 'Euskara',
         'fi': 'ফিনিশ',
+        'mn': 'মঙ্গোলীয় (Latin)',
     }
 
     # Greek (el)
@@ -640,6 +653,7 @@ def build_translations(ns):
         'la': 'Λατινικά',
         'eu': 'Euskara',
         'fi': 'Φινλανδικά',
+        'mn': 'Μογγολική (Latin)',
     }
 
     # Persian (fa)
@@ -654,6 +668,7 @@ def build_translations(ns):
         'la': 'لاتین',
         'eu': 'Euskara',
         'fi': 'فنلاندی',
+        'mn': 'مغولی (Latin)',
     }
 
     # Hebrew (he)
@@ -668,6 +683,7 @@ def build_translations(ns):
         'la': 'לטינית',
         'eu': 'Euskara',
         'fi': 'פינית',
+        'mn': 'מונגולית (Latin)',
     }
 
     # Hindi (hi)
@@ -682,6 +698,7 @@ def build_translations(ns):
         'la': 'लैटिन',
         'eu': 'Euskara',
         'fi': 'फ़िनिश',
+        'mn': 'मंगोलियाई (Latin)',
     }
 
     # Japanese (ja)
@@ -696,6 +713,7 @@ def build_translations(ns):
         'la': 'ラテン語',
         'eu': 'バスク語',
         'fi': 'フィンランド語',
+        'mn': 'モンゴル語 (Latin)',
     }
 
     # Korean (ko)
@@ -710,6 +728,7 @@ def build_translations(ns):
         'la': '라틴어',
         'eu': '바스크어',
         'fi': '핀란드어',
+        'mn': '몽골어 (Latin)',
     }
 
     # Dutch (nl) - also fix en and pl
@@ -726,6 +745,7 @@ def build_translations(ns):
         'la': 'Latijn',
         'eu': 'Baskisch',
         'fi': 'Fins',
+        'mn': 'Mongools (Latin)',
     }
 
     # Odia (or)
@@ -740,6 +760,7 @@ def build_translations(ns):
         'la': 'ଲାଟିନ',
         'eu': 'Euskara',
         'fi': 'ଫିନ୍ନିଶ',
+        'mn': 'ମଙ୍ଗୋଲୀୟ (Latin)',
     }
 
     # Punjabi (pa)
@@ -754,6 +775,7 @@ def build_translations(ns):
         'la': 'ਲੈਟਿਨ',
         'eu': 'Euskara',
         'fi': 'ਫਿਨਿਸ਼',
+        'mn': 'ਮੰਗੋਲੀਅਨ (Latin)',
     }
 
     # Russian (ru)
@@ -768,6 +790,7 @@ def build_translations(ns):
         'la': 'Латинский',
         'eu': 'Баскский',
         'fi': 'Финский',
+        'mn': 'Монгольский (Latin)',
     }
 
     # Sinhala (si)
@@ -782,6 +805,7 @@ def build_translations(ns):
         'la': 'ලතින්',
         'eu': 'Euskara',
         'fi': 'ෆින්නිෂ්',
+        'mn': 'මොංගෝලියානු (Latin)',
     }
 
     # Tamil (ta)
@@ -796,6 +820,7 @@ def build_translations(ns):
         'la': 'லத்தீன்',
         'eu': 'Euskara',
         'fi': 'பின்னிஷ்',
+        'mn': 'மங்கோலியன் (Latin)',
     }
 
     # Thai (th)
@@ -810,6 +835,7 @@ def build_translations(ns):
         'la': 'ภาษาละติน',
         'eu': 'Euskara',
         'fi': 'ฟินแลนด์',
+        'mn': 'ภาษามองโกเลีย (Latin)',
     }
 
     # Vietnamese (vi)
@@ -824,6 +850,7 @@ def build_translations(ns):
         'la': 'Tiếng La-tinh',
         'eu': 'Tiếng Basque',
         'fi': 'Tiếng Phần Lan',
+        'mn': 'Tiếng Mông Cổ (Latin)',
     }
 
     # Chinese (zh)
@@ -838,6 +865,7 @@ def build_translations(ns):
         'la': '拉丁语',
         'eu': '巴斯克语',
         'fi': '芬兰语',
+        'mn': '蒙古语 (Latin)',
     }
 
     # Urdu (ur) - only te and mr
@@ -847,6 +875,7 @@ def build_translations(ns):
         'la': f'لاطینی',
         'eu': 'Euskara',
         'fi': 'فنلش',
+        'mn': 'منگولی (Latin)',
     }
 
     # Armenian (hy) - tl, ka, am, kn, yo, gu, ha, jv, ur, te, mr
@@ -866,6 +895,7 @@ def build_translations(ns):
         'la': 'Լատիներեն',
         'eu': 'Euskara',
         'fi': 'Ֆիննական',
+        'mn': 'Մոնղոլ (Latin)',
     }
 
     # German (de)
@@ -875,6 +905,7 @@ def build_translations(ns):
         'la': 'Lateinisch',
         'eu': 'Baskisch',
         'fi': 'Finnisch',
+        'mn': 'Mongolisch (Latein)',
     }
 
     # Spanish (es)
@@ -885,6 +916,7 @@ def build_translations(ns):
         'la': 'Latín',
         'eu': 'Euskera',
         'fi': 'Finés',
+        'mn': 'Mongol (Latin)',
     }
 
     # French (fr)
@@ -896,6 +928,7 @@ def build_translations(ns):
         'la': 'Latin',
         'eu': 'Basque',
         'fi': 'Finnois',
+        'mn': 'Mongol (Latin)',
     }
 
     # Hungarian (hu)
@@ -908,6 +941,7 @@ def build_translations(ns):
         'la': 'Latin',
         'eu': 'Baszk',
         'fi': 'Finn',
+        'mn': 'Mongol (Latin)',
     }
 
     # Italian (it)
@@ -916,12 +950,14 @@ def build_translations(ns):
         'la': 'Latino',
         'eu': 'Basco',
         'fi': 'Finlandese',
+        'mn': 'Mongolo (Latino)',
     }
 
     # Javanese (jv) - minimal changes needed
     t['jv'] = {
         'eu': 'Euskara',
         'fi': 'Finlandia',
+        'mn': 'Mongol (Latin)',
     }
 
     # Newari (new) - no reliable translations available for newly missing entries
@@ -938,6 +974,7 @@ def build_translations(ns):
         'la': 'Latin',
         'eu': 'Baskijski',
         'fi': 'Fiński',
+        'mn': 'Mongolski (Latin)',
     }
 
     # Portuguese (pt)
@@ -946,6 +983,7 @@ def build_translations(ns):
         'la': 'Latim',
         'eu': 'Basco',
         'fi': 'Finlandês',
+        'mn': 'Mongol (Latim)',
     }
 
     # Swedish (sv)
@@ -954,6 +992,7 @@ def build_translations(ns):
         'la': 'Latin',
         'eu': 'Euskara',
         'fi': 'Finska',
+        'mn': 'Mongoliska (Latin)',
     }
 
     # Swahili (sw) - Ki- prefix pattern
@@ -968,6 +1007,7 @@ def build_translations(ns):
         'la': 'Kilatini',
         'eu': 'Kibaski',
         'fi': 'Kifini',
+        'mn': 'Kimongolia (Latin)',
     }
 
     # Turkish (tr)
@@ -979,17 +1019,71 @@ def build_translations(ns):
         'la': 'Latince',
         'eu': 'Baskça',
         'fi': 'Fince',
+        'mn': 'Moğolca (Latin)',
     }
 
     # Indonesian (id) - existing entries are acceptable Indonesian forms
     t['id'] = {
         'eu': 'Basque',
         'fi': 'Finlandia',
+        'mn': 'Mongol (Latin)',
     }
 
     # Basque (eu)
     t['eu'] = {
         'fi': 'Finlandiera',
+        'mn': 'Mongoliera (Latin)',
+    }
+
+    # Mongolian Latin (mn) - full translations of all language names in Mongolian Latin
+    t['mn'] = {
+        'en': 'Angli',
+        'es': 'Ispani',
+        'de': 'German',
+        'fr': 'Frants',
+        'ja': f'Yapon ({ns["ja"]})',
+        'it': 'Itali',
+        'ru': f'Oros ({ns["ru"]})',
+        'zh': f'Khyatad ({ns["zh"]})',
+        'he': f'Evrei ({ns["he"]})',
+        'th': f'Tailand ({ns["th"]})',
+        'vi': f'Vyetnam ({ns["vi"]})',
+        'ar': f'Arabi ({ns["ar"]})',
+        'hi': f'Khindi ({ns["hi"]})',
+        'el': f'Grek ({ns["el"]})',
+        'ko': f'Solongos ({ns["ko"]})',
+        'pt': 'Portugali',
+        'bn': f'Bengali ({ns["bn"]})',
+        'pa': f'Punjabi ({ns["pa"]})',
+        'fa': f'Persi ({ns["fa"]})',
+        'sw': 'Kiswahili',
+        'id': 'Indonezi',
+        'pl': 'Polsh',
+        'nl': 'Golland',
+        'sv': 'Shved',
+        'tr': f'Turk ({ns["tr"]})',
+        'hu': 'Ungar',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'Lkhasa Tövd ({ns["bo"]})',
+        'si': f'Singal ({ns["si"]})',
+        'or': f'Odia ({ns["or"]})',
+        'ta': f'Tamil ({ns["ta"]})',
+        'hy': f'Armeni ({ns["hy"]})',
+        'tl': 'Tagalog',
+        'ka': f'Gurj ({ns["ka"]})',
+        'am': f'Amkhar ({ns["am"]})',
+        'kn': f'Kannada ({ns["kn"]})',
+        'yo': 'Yoruba',
+        'gu': f'Gujarati ({ns["gu"]})',
+        'ha': 'Khaus',
+        'jv': 'Javanese',
+        'ur': f'Urdu ({ns["ur"]})',
+        'te': f'Telugu ({ns["te"]})',
+        'mr': f'Marati ({ns["mr"]})',
+        'la': 'Latin',
+        'eu': 'Euskara',
+        'fi': 'Suomi',
+        'mn': 'Mongol (Latin)',
     }
 
     return t
@@ -1101,7 +1195,7 @@ def main():
     translations = build_translations(ns)
 
     # Files needing full replacement
-    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'ka', 'kn', 'la', 'mr', 'te', 'tl', 'yo']
+    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'ka', 'kn', 'la', 'mn', 'mr', 'te', 'tl', 'yo']
     # All other locales with partial replacements
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
