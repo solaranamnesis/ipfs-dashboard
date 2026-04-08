@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'id', 'pl', 'nl', 'sv',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'gu', 'ha', 'jv', 'ur', 'te', 'mr'
+    'yo', 'gu', 'ha', 'jv', 'ur', 'te', 'mr', 'la'
 ]
 
 def get_href(lang):
@@ -101,6 +101,7 @@ def build_translations(ns):
         'ur': f'उर्दू ({ns["ur"]})',
         'te': f'तेलुगू ({ns["te"]})',
         'mr': 'मराठी',
+        'la': 'लॅटिन',
     }
 
     t['gu'] = {
@@ -147,6 +148,7 @@ def build_translations(ns):
         'ur': f'ઉર્દૂ ({ns["ur"]})',
         'te': f'તેલુગુ ({ns["te"]})',
         'mr': f'મરાઠી ({ns["mr"]})',
+        'la': 'લૅટિન',
     }
 
     t['ha'] = {
@@ -193,6 +195,7 @@ def build_translations(ns):
         'ur': f'Urdiyanci ({ns["ur"]})',
         'te': f'Telugunci ({ns["te"]})',
         'mr': f'Marathanci ({ns["mr"]})',
+        'la': 'Latinci',
     }
 
     t['ka'] = {
@@ -239,6 +242,7 @@ def build_translations(ns):
         'ur': f'ურდუ ({ns["ur"]})',
         'te': f'თელუგუ ({ns["te"]})',
         'mr': f'მარათი ({ns["mr"]})',
+        'la': 'ლათინური',
     }
 
     t['am'] = {
@@ -285,6 +289,7 @@ def build_translations(ns):
         'ur': f'ኡርዱ ({ns["ur"]})',
         'te': f'ቴሉጉ ({ns["te"]})',
         'mr': f'ማራቲ ({ns["mr"]})',
+        'la': 'ላቲን',
     }
 
     t['kn'] = {
@@ -331,6 +336,7 @@ def build_translations(ns):
         'ur': f'ಉರ್ದು ({ns["ur"]})',
         'te': f'ತೆಲುಗು ({ns["te"]})',
         'mr': f'ಮರಾಠಿ ({ns["mr"]})',
+        'la': 'ಲ್ಯಾಟಿನ್',
     }
 
     t['te'] = {
@@ -377,6 +383,7 @@ def build_translations(ns):
         'ur': f'ఉర్దూ ({ns["ur"]})',
         'te': 'తెలుగు',
         'mr': f'మరాఠీ ({ns["mr"]})',
+        'la': 'లాటిన్',
     }
 
     t['tl'] = {
@@ -423,6 +430,7 @@ def build_translations(ns):
         'ur': f'Urdu ({ns["ur"]})',
         'te': f'Telugu ({ns["te"]})',
         'mr': f'Marathi ({ns["mr"]})',
+        'la': 'Latin',
     }
 
     t['yo'] = {
@@ -469,6 +477,55 @@ def build_translations(ns):
         'ur': f'Èdè Urdù ({ns["ur"]})',
         'te': f'Èdè Telugu ({ns["te"]})',
         'mr': f'Èdè Marathi ({ns["mr"]})',
+        'la': 'Èdè Látìnì',
+    }
+
+
+    t['la'] = {
+        'en': 'Anglice',
+        'es': 'Hispanice',
+        'de': 'Germanice',
+        'fr': 'Gallice',
+        'ja': f'Iaponice ({ns["ja"]})',
+        'it': 'Italice',
+        'ru': f'Russice ({ns["ru"]})',
+        'zh': f'Sinice ({ns["zh"]})',
+        'he': f'Hebraice ({ns["he"]})',
+        'th': f'Thaice ({ns["th"]})',
+        'vi': f'Vietnamice ({ns["vi"]})',
+        'ar': f'Arabice ({ns["ar"]})',
+        'hi': f'Hindice ({ns["hi"]})',
+        'el': f'Graece ({ns["el"]})',
+        'ko': f'Coreance ({ns["ko"]})',
+        'pt': 'Lusitanice',
+        'bn': f'Bengalice ({ns["bn"]})',
+        'pa': f'Panjabiice ({ns["pa"]})',
+        'fa': f'Persice ({ns["fa"]})',
+        'sw': 'Kiswahili',
+        'id': 'Indonesice',
+        'pl': 'Polonice',
+        'nl': 'Batavice',
+        'sv': 'Suecice',
+        'tr': f'Turcice ({ns["tr"]})',
+        'hu': 'Hungarice',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'Tibetice ({ns["bo"]})',
+        'si': f'Singhalice ({ns["si"]})',
+        'or': f'Odice ({ns["or"]})',
+        'ta': f'Tamilice ({ns["ta"]})',
+        'hy': f'Armenice ({ns["hy"]})',
+        'tl': 'Tagalice',
+        'ka': f'Georgice ({ns["ka"]})',
+        'am': f'Amharice ({ns["am"]})',
+        'kn': f'Kannadice ({ns["kn"]})',
+        'yo': 'Yorubice',
+        'gu': f'Gujaratice ({ns["gu"]})',
+        'ha': 'Hausaice',
+        'jv': 'Iavanice',
+        'ur': f'Urduice ({ns["ur"]})',
+        'te': f'Teluguce ({ns["te"]})',
+        'mr': f'Marathice ({ns["mr"]})',
+        'la': 'Latina',
     }
 
     # =========== PARTIAL REPLACEMENTS ===========
@@ -482,6 +539,7 @@ def build_translations(ns):
         'ur': f'الأردية ({ns["ur"]})',
         'te': f'التيلوغوية ({ns["te"]})',
         'mr': f'الماراثية ({ns["mr"]})',
+        'la': 'اللاتينية',
     }
 
     # Bengali (bn)
@@ -493,6 +551,7 @@ def build_translations(ns):
         'ur': f'উর্দু ({ns["ur"]})',
         'te': f'তেলুগু ({ns["te"]})',
         'mr': f'মারাঠি ({ns["mr"]})',
+        'la': 'লাটিন',
     }
 
     # Greek (el)
@@ -504,6 +563,7 @@ def build_translations(ns):
         'ur': f'Ουρντού ({ns["ur"]})',
         'te': f'Τελούγκου ({ns["te"]})',
         'mr': f'Μαράθι ({ns["mr"]})',
+        'la': 'Λατινικά',
     }
 
     # Persian (fa)
@@ -515,6 +575,7 @@ def build_translations(ns):
         'ur': f'اردو ({ns["ur"]})',
         'te': f'تلوگویی ({ns["te"]})',
         'mr': f'مراتی ({ns["mr"]})',
+        'la': 'لاتین',
     }
 
     # Hebrew (he)
@@ -526,6 +587,7 @@ def build_translations(ns):
         'ur': f'אורדו ({ns["ur"]})',
         'te': f'טלוגו ({ns["te"]})',
         'mr': f'מראתית ({ns["mr"]})',
+        'la': 'לטינית',
     }
 
     # Hindi (hi)
@@ -537,6 +599,7 @@ def build_translations(ns):
         'ur': f'उर्दू ({ns["ur"]})',
         'te': f'तेलुगु ({ns["te"]})',
         'mr': f'मराठी ({ns["mr"]})',
+        'la': 'लैटिन',
     }
 
     # Japanese (ja)
@@ -548,6 +611,7 @@ def build_translations(ns):
         'ur': f'ウルドゥー語 ({ns["ur"]})',
         'te': f'テルグ語 ({ns["te"]})',
         'mr': f'マラーティー語 ({ns["mr"]})',
+        'la': 'ラテン語',
     }
 
     # Korean (ko)
@@ -559,6 +623,7 @@ def build_translations(ns):
         'ur': f'우르두어 ({ns["ur"]})',
         'te': f'텔루구어 ({ns["te"]})',
         'mr': f'마라티어 ({ns["mr"]})',
+        'la': '라틴어',
     }
 
     # Dutch (nl) - also fix en and pl
@@ -572,6 +637,7 @@ def build_translations(ns):
         'ur': f'Urdu ({ns["ur"]})',
         'te': f'Telugu ({ns["te"]})',
         'mr': f'Marathi ({ns["mr"]})',
+        'la': 'Latijn',
     }
 
     # Odia (or)
@@ -583,6 +649,7 @@ def build_translations(ns):
         'ur': f'ଉର\u0b4d\u0b26\u0b41 ({ns["ur"]})',
         'te': f'ତେଲୁଗୁ ({ns["te"]})',
         'mr': f'ମ\u0b30ାଠି ({ns["mr"]})',
+        'la': 'ଲାଟିନ',
     }
 
     # Punjabi (pa)
@@ -594,6 +661,7 @@ def build_translations(ns):
         'ur': f'ਉਰਦੂ ({ns["ur"]})',
         'te': f'ਤੇਲਗੂ ({ns["te"]})',
         'mr': f'ਮਰਾਠੀ ({ns["mr"]})',
+        'la': 'ਲੈਟਿਨ',
     }
 
     # Russian (ru)
@@ -605,6 +673,7 @@ def build_translations(ns):
         'ur': f'Урду ({ns["ur"]})',
         'te': f'Телугу ({ns["te"]})',
         'mr': f'Маратхи ({ns["mr"]})',
+        'la': 'Латинский',
     }
 
     # Sinhala (si)
@@ -616,6 +685,7 @@ def build_translations(ns):
         'ur': f'උර්දු ({ns["ur"]})',
         'te': f'තෙලිඟු ({ns["te"]})',
         'mr': f'මරාති ({ns["mr"]})',
+        'la': 'ලතින්',
     }
 
     # Tamil (ta)
@@ -627,6 +697,7 @@ def build_translations(ns):
         'ur': f'உருது ({ns["ur"]})',
         'te': f'தெலுங்கு ({ns["te"]})',
         'mr': f'மராத்தி ({ns["mr"]})',
+        'la': 'லத்தீன்',
     }
 
     # Thai (th)
@@ -638,6 +709,7 @@ def build_translations(ns):
         'ur': f'อูรดู ({ns["ur"]})',
         'te': f'เตลูกู ({ns["te"]})',
         'mr': f'มราฐี ({ns["mr"]})',
+        'la': 'ภาษาละติน',
     }
 
     # Vietnamese (vi)
@@ -649,6 +721,7 @@ def build_translations(ns):
         'ur': f'Tiếng Urdu ({ns["ur"]})',
         'te': f'Tiếng Telugu ({ns["te"]})',
         'mr': f'Tiếng Marathi ({ns["mr"]})',
+        'la': 'Tiếng La-tinh',
     }
 
     # Chinese (zh)
@@ -660,12 +733,14 @@ def build_translations(ns):
         'ur': f'乌尔都语 ({ns["ur"]})',
         'te': f'泰卢固语 ({ns["te"]})',
         'mr': f'马拉地语 ({ns["mr"]})',
+        'la': '拉丁语',
     }
 
     # Urdu (ur) - only te and mr
     t['ur'] = {
         'te': f'تیلگو ({ns["te"]})',
         'mr': f'مراٹھی ({ns["mr"]})',
+        'la': f'لاطینی',
     }
 
     # Armenian (hy) - tl, ka, am, kn, yo, gu, ha, jv, ur, te, mr
@@ -682,12 +757,14 @@ def build_translations(ns):
         'ur': f'Urdu ({ns["ur"]})',
         'te': f'\u054f\u0565\u056c\u0578\u0582\u0563\u0565\u0580\u0565\u0576 ({ns["te"]})',  # Telugérén
         'mr': f'\u0544\u0561\u0580\u0561\u057f\u0565\u0580\u0565\u0576 ({ns["mr"]})',  # Maratérén
+        'la': 'Լատիներեն',
     }
 
     # German (de)
     t['de'] = {
         'gu': f'Gujaratisch ({ns["gu"]})',
         'jv': 'Javanisch',
+        'la': 'Lateinisch',
     }
 
     # Spanish (es)
@@ -695,6 +772,7 @@ def build_translations(ns):
         'gu': f'Gujaratí ({ns["gu"]})',
         'jv': 'Javanés',
         'mr': f'Maratí ({ns["mr"]})',
+        'la': 'Latín',
     }
 
     # French (fr)
@@ -703,6 +781,7 @@ def build_translations(ns):
         'jv': 'Javanais',
         'ur': f'Ourdou ({ns["ur"]})',
         'te': f'Télougou ({ns["te"]})',
+        'la': 'Latin',
     }
 
     # Hungarian (hu)
@@ -712,11 +791,13 @@ def build_translations(ns):
         'ha': 'Hausza',
         'jv': 'Jávai',
         'mr': f'Maráthi ({ns["mr"]})',
+        'la': 'Latin',
     }
 
     # Italian (it)
     t['it'] = {
         'jv': 'Giavanése',
+        'la': 'Latino',
     }
 
     # Javanese (jv) - minimal changes needed
@@ -733,16 +814,19 @@ def build_translations(ns):
         'yo': 'Joruba',
         'gu': f'Gudżarati ({ns["gu"]})',
         'jv': 'Jawajski',
+        'la': 'Latin',
     }
 
     # Portuguese (pt)
     t['pt'] = {
         'jv': 'Javanês',
+        'la': 'Latim',
     }
 
     # Swedish (sv)
     t['sv'] = {
         'jv': 'Javanesiska',
+        'la': 'Latin',
     }
 
     # Swahili (sw) - Ki- prefix pattern
@@ -754,6 +838,7 @@ def build_translations(ns):
         'ur': f'Kiurdu ({ns["ur"]})',
         'te': f'Kitelugu ({ns["te"]})',
         'mr': f'Kimarathi ({ns["mr"]})',
+        'la': 'Kilatini',
     }
 
     # Turkish (tr)
@@ -762,6 +847,7 @@ def build_translations(ns):
         'jv': 'Yavanice',
         'ur': f'Urduca ({ns["ur"]})',
         'te': f'Teluguca ({ns["te"]})',
+        'la': 'Latince',
     }
 
     # Indonesian (id) - existing entries are acceptable Indonesian forms
@@ -876,7 +962,7 @@ def main():
     translations = build_translations(ns)
 
     # Files needing full replacement
-    full_replace_locales = ['am', 'gu', 'ha', 'ka', 'kn', 'mr', 'te', 'tl', 'yo']
+    full_replace_locales = ['am', 'gu', 'ha', 'ka', 'kn', 'la', 'mr', 'te', 'tl', 'yo']
     # All other locales with partial replacements
     partial_locales = [
         'ar', 'bn', 'el', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
