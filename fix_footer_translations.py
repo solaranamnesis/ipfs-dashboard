@@ -8,7 +8,7 @@ WORKDIR = os.path.dirname(os.path.abspath(__file__))
 
 LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
-    'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'pl', 'nl', 'sv',
+    'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'pl', 'nl', 'sv', 'da',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
     'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht',
 ]
@@ -1336,6 +1336,7 @@ def build_translations(ns):
 
     # German (de)
     t['de'] = {
+        'da': 'Dänisch',
         'gu': f'Gujaratisch ({ns["gu"]})',
         'jv': 'Javanisch',
         'la': 'Lateinisch',
@@ -1352,6 +1353,7 @@ def build_translations(ns):
 
     # Spanish (es)
     t['es'] = {
+        'da': 'Danés',
         'gu': f'Gujaratí ({ns["gu"]})',
         'jv': 'Javanés',
         'mr': f'Maratí ({ns["mr"]})',
@@ -1369,6 +1371,7 @@ def build_translations(ns):
 
     # French (fr)
     t['fr'] = {
+        'da': 'Danois',
         'ha': 'Haoussa',
         'jv': 'Javanais',
         'ur': f'Ourdou ({ns["ur"]})',
@@ -1406,6 +1409,7 @@ def build_translations(ns):
 
     # Italian (it)
     t['it'] = {
+        'da': 'Danese',
         'ml': 'Malayalam (മlayalamml)',
         'jv': 'Giavanése',
         'la': 'Latino',
@@ -1440,6 +1444,7 @@ def build_translations(ns):
 
     # Polish (pl)
     t['pl'] = {
+        'da': 'Duński',
         'yo': 'Joruba',
         'gu': f'Gudżarati ({ns["gu"]})',
         'jv': 'Jawajski',
@@ -1457,6 +1462,7 @@ def build_translations(ns):
 
     # Portuguese (pt)
     t['pt'] = {
+        'da': 'Dinamarquês',
         'ml': 'Malayalam (മlayalamml)',
         'jv': 'Javanês',
         'la': 'Latim',
@@ -1472,6 +1478,7 @@ def build_translations(ns):
 
     # Swedish (sv)
     t['sv'] = {
+        'da': 'Danska',
         'ml': 'Malayalam (മlayalamml)',
         'jv': 'Javanesiska',
         'la': 'Latin',
@@ -1482,6 +1489,77 @@ def build_translations(ns):
         'kk': f'Kazakiska ({ns["kk"]})',
         'uk': 'Ukrainska (Українська)',
         'bg': 'Bulgariska',
+        'ht': 'Kreyòl',
+    }
+
+    # Danish (da)
+    t['da'] = {
+        'en': 'Engelsk',
+        'es': 'Spansk',
+        'de': 'Tysk',
+        'fr': 'Fransk',
+        'ja': f'Japansk ({ns["ja"]})',
+        'it': 'Italiensk',
+        'ru': f'Russisk ({ns["ru"]})',
+        'sr': 'Serbisk',
+        'bs': 'Bosnisk',
+        'hr': 'Kroatisk',
+        'uk': f'Ukrainsk ({ns["uk"]})',
+        'zh': f'Kinesisk ({ns["zh"]})',
+        'he': f'Hebraisk ({ns["he"]})',
+        'th': f'Thailandsk ({ns["th"]})',
+        'vi': f'Vietnamesisk ({ns["vi"]})',
+        'ar': f'Arabisk ({ns["ar"]})',
+        'hi': f'Hindi ({ns["hi"]})',
+        'el': f'Græsk ({ns["el"]})',
+        'ko': f'Koreansk ({ns["ko"]})',
+        'pt': 'Portugisisk',
+        'bn': f'Bengalsk ({ns["bn"]})',
+        'pa': f'Punjabi ({ns["pa"]})',
+        'fa': f'Persisk ({ns["fa"]})',
+        'sw': 'Swahili',
+        'so': 'Somali',
+        'id': 'Indonesisk',
+        'pl': 'Polsk',
+        'nl': 'Nederlandsk',
+        'sv': 'Svensk',
+        'tr': f'Tyrkisk ({ns["tr"]})',
+        'hu': 'Ungarsk',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'Lhasa Tibetansk ({ns["bo"]})',
+        'si': f'Singalesisk ({ns["si"]})',
+        'or': f'Odia ({ns["or"]})',
+        'ta': f'Tamilsk ({ns["ta"]})',
+        'hy': f'Armensk ({ns["hy"]})',
+        'tl': 'Tagalog',
+        'ka': f'Georgisk ({ns["ka"]})',
+        'am': f'Amharisk ({ns["am"]})',
+        'kn': f'Kannada ({ns["kn"]})',
+        'yo': 'Yoruba',
+        'zu': 'IsiZulu',
+        'ig': 'Igbo',
+        'gu': f'Gujarati ({ns["gu"]})',
+        'ha': 'Hausa',
+        'jv': 'Javanesisk',
+        'ur': f'Urdu ({ns["ur"]})',
+        'ps': f'Pashto ({ns["ps"]})',
+        'te': f'Telugu ({ns["te"]})',
+        'mr': f'Marathi ({ns["mr"]})',
+        'my': f'Burmesisk ({ns["my"]})',
+        'bg': 'Bulgarsk',
+        'ml': 'Malayalam (മlayalamml)',
+        'la': 'Latin',
+        'eu': 'Baskisk',
+        'fi': 'Finsk',
+        'mn': 'Mongolsk (Latin)',
+        'tt': f'Tatarsk ({ns["tt"]})',
+        'kk': f'Kasakhisk ({ns["kk"]})',
+        'ky': f'Kirgisisk ({ns["ky"]})',
+        'cs': 'Tjekkisk',
+        'ro': 'Rumænsk',
+        'ku': f'Kurdisk ({ns["ku"]})',
+        'af': 'Afrikaans',
+        'ca': 'Catalansk',
         'ht': 'Kreyòl',
     }
 
@@ -2535,7 +2613,7 @@ def main():
     translations = build_translations(ns)
 
     # Locales whose footers are fully translated into the target language
-    full_replace_locales = ['af', 'am', 'bg', 'ca', 'fi', 'gu', 'ha', 'hr', 'ht', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'my', 'ps', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
+    full_replace_locales = ['af', 'am', 'bg', 'ca', 'da', 'fi', 'gu', 'ha', 'hr', 'ht', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'my', 'ps', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
     # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
