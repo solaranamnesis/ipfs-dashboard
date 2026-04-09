@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'id', 'pl', 'nl', 'sv',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af',
+    'yo', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca',
 ]
 
 def get_href(lang):
@@ -1804,6 +1804,71 @@ def build_translations(ns):
         'af': 'Afrikaans',
     }
 
+    t['ca'] = {
+        'en': 'Anglès',
+        'es': 'Castellà',
+        'de': 'Alemany',
+        'fr': 'Francès',
+        'ja': f'Japonès ({ns["ja"]})',
+        'it': 'Italià',
+        'ru': f'Rus ({ns["ru"]})',
+        'sr': 'Serbi',
+        'bs': 'Bosnià',
+        'hr': 'Croat',
+        'uk': f'Ucraïnès ({ns["uk"]})',
+        'zh': f'Xinès ({ns["zh"]})',
+        'he': f'Hebreu ({ns["he"]})',
+        'th': f'Tailandès ({ns["th"]})',
+        'vi': f'Vietnamita ({ns["vi"]})',
+        'ar': f'Àrab ({ns["ar"]})',
+        'hi': f'Hindi ({ns["hi"]})',
+        'el': f'Grec ({ns["el"]})',
+        'ko': f'Coreà ({ns["ko"]})',
+        'pt': 'Portuguès',
+        'bn': f'Bengalí ({ns["bn"]})',
+        'pa': f'Panjabi ({ns["pa"]})',
+        'fa': f'Persa ({ns["fa"]})',
+        'sw': 'Suahili',
+        'id': 'Indonesi',
+        'pl': 'Polonès',
+        'nl': 'Neerlandès',
+        'sv': 'Suec',
+        'tr': f'Turc ({ns["tr"]})',
+        'hu': 'Hongarès',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'Tibetà de Lhasa ({ns["bo"]})',
+        'si': f'Singalès ({ns["si"]})',
+        'or': f'Odia ({ns["or"]})',
+        'ta': f'Tàmil ({ns["ta"]})',
+        'hy': f'Armeni ({ns["hy"]})',
+        'tl': 'Tagal',
+        'ka': f'Georgià ({ns["ka"]})',
+        'am': f'Amhàric ({ns["am"]})',
+        'kn': f'Kannada ({ns["kn"]})',
+        'yo': 'Ioruba',
+        'ig': 'Igbo',
+        'gu': f'Gujarati ({ns["gu"]})',
+        'ha': 'Haussa',
+        'jv': 'Javanès',
+        'ur': f'Urdu ({ns["ur"]})',
+        'ps': f'Paixtu ({ns["ps"]})',
+        'te': f'Telugu ({ns["te"]})',
+        'mr': f'Maratí ({ns["mr"]})',
+        'ml': f'Malai ({ns["ml"]})',
+        'la': 'Llatí',
+        'eu': 'Basc',
+        'fi': 'Finès',
+        'mn': f'Mongol (Latin)',
+        'tt': f'Tàtar ({ns["tt"]})',
+        'kk': f'Kazakh ({ns["kk"]})',
+        'ky': f'Kirguís ({ns["ky"]})',
+        'cs': 'Txec',
+        'ro': 'Romanès',
+        'ku': f'Kurd ({ns["ku"]})',
+        'af': 'Afrikaans',
+        'ca': 'Català',
+    }
+
     return t
 
 
@@ -2012,7 +2077,7 @@ def main():
     translations = build_translations(ns)
 
     # Locales whose footers are fully translated into the target language
-    full_replace_locales = ['af', 'am', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'ps', 'sr', 'te', 'tl', 'uk', 'yo']
+    full_replace_locales = ['af', 'am', 'ca', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'ps', 'sr', 'te', 'tl', 'uk', 'yo']
     # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
