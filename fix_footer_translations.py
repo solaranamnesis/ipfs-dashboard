@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'pl', 'nl', 'sv',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca',
+    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca',
 ]
 
 def get_href(lang):
@@ -2127,6 +2127,75 @@ def build_translations(ns):
         'so': 'Somali',
     }
 
+    t['zu'] = {
+        'en': 'IsiNgisi',
+        'es': 'IsiSpain',
+        'de': 'IsiJalimani',
+        'fr': 'IsiFulentshi',
+        'ja': f'IsiJapane ({ns["ja"]})',
+        'it': 'IsiItaly',
+        'ru': f'IsiRashiya ({ns["ru"]})',
+        'sr': 'Srpski',
+        'uk': 'Українська',
+        'zh': f'IsiTshayina ({ns["zh"]})',
+        'he': f'IsiHebhiru ({ns["he"]})',
+        'th': f'IsiThai ({ns["th"]})',
+        'vi': f'IsiVietnam ({ns["vi"]})',
+        'ar': f'IsiArabu ({ns["ar"]})',
+        'hi': f'IsiHindi ({ns["hi"]})',
+        'el': f'IsiGrikhi ({ns["el"]})',
+        'ko': f'IsiKorea ({ns["ko"]})',
+        'pt': 'IsiPhuthukesi',
+        'bn': f'IsiBengali ({ns["bn"]})',
+        'pa': f'IsiPunjabi ({ns["pa"]})',
+        'fa': f'IsiPersia ({ns["fa"]})',
+        'sw': 'IsiSwahili',
+        'so': 'Somali',
+        'id': 'IsiIndonesiya',
+        'pl': 'IsiPholishi',
+        'nl': 'IsiDutch',
+        'sv': 'IsiSwidi',
+        'tr': f'IsiTurki ({ns["tr"]})',
+        'hu': 'IsiHungarian',
+        'new': f'IsiNepal Bhasa ({ns["new"]})',
+        'bo': f'IsiTibethi Lhasa ({ns["bo"]})',
+        'si': f'IsiSinhala ({ns["si"]})',
+        'or': f'IsiOdia ({ns["or"]})',
+        'ta': f'IsiTamil ({ns["ta"]})',
+        'hy': f'IsiArmenia ({ns["hy"]})',
+        'tl': 'IsiTagalog',
+        'ka': f'IsiJojiyana ({ns["ka"]})',
+        'am': f'IsiAmharic ({ns["am"]})',
+        'kn': f'IsiKannada ({ns["kn"]})',
+        'yo': 'IsiYoruba',
+        'zu': 'IsiZulu',
+        'ig': 'Igbo',
+        'gu': f'IsiGujarati ({ns["gu"]})',
+        'ha': 'IsiHausa',
+        'jv': 'IsiJawa',
+        'ur': f'IsiUrdu ({ns["ur"]})',
+        'ps': f'({ns["ps"]})',
+        'te': f'IsiTelugu ({ns["te"]})',
+        'mr': f'IsiMarathi ({ns["mr"]})',
+        'my': f'Myanmar ({ns["my"]})',
+        'bg': 'Bulgarian',
+        'ml': f'Malayalam ({ns["ml"]})',
+        'la': 'Latin',
+        'eu': 'Basque',
+        'fi': 'Finnish',
+        'mn': 'Mongolian (Latin)',
+        'tt': f'Tatar ({ns["tt"]})',
+        'kk': f'Kazakh ({ns["kk"]})',
+        'ky': f'Kyrgyz ({ns["ky"]})',
+        'cs': 'Czech',
+        'ro': 'Romanian',
+        'ku': f'Kurdish ({ns["ku"]})',
+        'af': 'Afrikaans',
+        'ca': 'Català',
+        'bs': 'Bosanski',
+        'hr': 'Hrvatski',
+    }
+
     return t
 
 
@@ -2335,7 +2404,7 @@ def main():
     translations = build_translations(ns)
 
     # Locales whose footers are fully translated into the target language
-    full_replace_locales = ['af', 'am', 'bg', 'ca', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'my', 'ps', 'so', 'sr', 'te', 'tl', 'uk', 'yo']
+    full_replace_locales = ['af', 'am', 'bg', 'ca', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'my', 'ps', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
     # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
