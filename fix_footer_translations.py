@@ -588,7 +588,7 @@ def build_translations(ns):
         'ur': f'Èdè Urdù ({ns["ur"]})',
         'te': f'Èdè Telugu ({ns["te"]})',
         'mr': f'Èdè Marathi ({ns["mr"]})',
-        'ml': 'Malayalam (മlayalamml)',
+        'ml': f'Èdè Malayalam ({ns["ml"]})',
         'la': 'Èdè Látìnì',
         'eu': 'Euskara',
         'fi': 'Èdè Finnish',
