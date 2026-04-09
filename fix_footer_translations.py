@@ -7,7 +7,7 @@ import os
 WORKDIR = os.path.dirname(os.path.abspath(__file__))
 
 LANG_ORDER = [
-    'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
+    'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'id', 'pl', 'nl', 'sv',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
     'yo', 'gu', 'ha', 'jv', 'ur', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'ro'
@@ -389,6 +389,7 @@ def build_translations(ns):
         'ja': f'ಜಾಪನೀಸ್ ({ns["ja"]})',
         'it': 'ಇಟಾಲಿಯನ್',
         'ru': f'ರಷ್ಯನ್ ({ns["ru"]})',
+        'sr': 'Serbian (Српски)',
         'uk': 'ಉಕ್ರೇನಿಯನ್ (Українська)',
         'zh': f'ಚೀನೀ ({ns["zh"]})',
         'he': f'ಹೀಬ್ರೂ ({ns["he"]})',
@@ -1493,6 +1494,64 @@ def build_translations(ns):
         'uk': 'Ukrainština (Українська)',
     }
 
+    # Serbian (sr) - full replacement
+    t['sr'] = {
+        'en': 'Енглески',
+        'es': 'Шпански',
+        'de': 'Немачки',
+        'fr': 'Француски',
+        'ja': f'Јапански ({ns["ja"]})',
+        'it': 'Италијански',
+        'ru': f'Руски ({ns["ru"]})',
+        'sr': 'Српски',
+        'uk': 'Украјински (Українська)',
+        'zh': f'Кинески ({ns["zh"]})',
+        'he': f'Хебрејски ({ns["he"]})',
+        'th': f'Тајски ({ns["th"]})',
+        'vi': f'Вијетнамски ({ns["vi"]})',
+        'ar': f'Арапски ({ns["ar"]})',
+        'hi': f'Хинди ({ns["hi"]})',
+        'el': f'Грчки ({ns["el"]})',
+        'ko': f'Корејски ({ns["ko"]})',
+        'pt': 'Португалски',
+        'bn': f'Бенгалски ({ns["bn"]})',
+        'pa': f'Панџаби ({ns["pa"]})',
+        'fa': f'Персијски ({ns["fa"]})',
+        'sw': 'Свахили',
+        'id': 'Индонежански',
+        'pl': 'Пољски',
+        'nl': 'Холандски',
+        'sv': 'Шведски',
+        'tr': f'Турски ({ns["tr"]})',
+        'hu': 'Мађарски',
+        'new': f'Непал баса ({ns["new"]})',
+        'bo': f'Ласа тибетски ({ns["bo"]})',
+        'si': f'Синхалешки ({ns["si"]})',
+        'or': f'Одија ({ns["or"]})',
+        'ta': f'Тамилски ({ns["ta"]})',
+        'hy': f'Јерменски ({ns["hy"]})',
+        'tl': 'Тагалог',
+        'ka': f'Грузијски ({ns["ka"]})',
+        'am': f'Амхарски ({ns["am"]})',
+        'kn': f'Канада ({ns["kn"]})',
+        'yo': 'Јоруба',
+        'gu': f'Гуџарати ({ns["gu"]})',
+        'ha': 'Хауса',
+        'jv': 'Јавански',
+        'ur': f'Урду ({ns["ur"]})',
+        'te': f'Телугу ({ns["te"]})',
+        'mr': f'Марати ({ns["mr"]})',
+        'ml': 'Малајалам (മlayalamml)',
+        'la': 'Латински',
+        'eu': 'Баскијски',
+        'fi': 'Фински',
+        'mn': 'Монголски (Latin)',
+        'tt': f'Татарски ({ns["tt"]})',
+        'kk': f'Казашки ({ns["kk"]})',
+        'ky': f'Киргиски ({ns["ky"]})',
+        'ro': 'Румунски',
+    }
+
     return t
 
 
@@ -1602,7 +1661,7 @@ def main():
     translations = build_translations(ns)
 
     # Files needing full replacement
-    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'te', 'tl', 'uk', 'yo']
+    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'sr', 'te', 'tl', 'uk', 'yo']
     # All other locales with partial replacements
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
