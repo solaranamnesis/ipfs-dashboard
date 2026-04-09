@@ -2058,6 +2058,75 @@ def build_translations(ns):
         'bg': 'Български',
     }
 
+    # Somali (so)
+    t['so'] = {
+        'en': 'Ingiriis',
+        'es': 'Isbaanish',
+        'de': 'Jarmal',
+        'fr': 'Faransiis',
+        'ja': f'Jabaan ({ns["ja"]})',
+        'it': 'Talyaani',
+        'ru': f'Ruush ({ns["ru"]})',
+        'sr': 'Srpski',
+        'uk': 'Yukreen (Українська)',
+        'zh': f'Shiinaha ({ns["zh"]})',
+        'he': f'Cabiri ({ns["he"]})',
+        'th': f'Tay ({ns["th"]})',
+        'vi': f'Viyetnaam ({ns["vi"]})',
+        'ar': f'Carabi ({ns["ar"]})',
+        'hi': f'Hindi ({ns["hi"]})',
+        'el': f'Giriig ({ns["el"]})',
+        'ko': f'Kooriya ({ns["ko"]})',
+        'pt': 'Boortaqiis',
+        'bn': f'Bengali ({ns["bn"]})',
+        'pa': f'Punjabi ({ns["pa"]})',
+        'fa': f'Faarisi ({ns["fa"]})',
+        'sw': 'Swaahili',
+        'id': 'Indooniisya',
+        'pl': 'Boolish',
+        'nl': 'Holland',
+        'sv': 'Iswiidhan',
+        'tr': f'Turki ({ns["tr"]})',
+        'hu': 'Hungari',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'Tibet Lhasa ({ns["bo"]})',
+        'si': f'Sinhala ({ns["si"]})',
+        'or': f'Odia ({ns["or"]})',
+        'ta': f'Tamil ({ns["ta"]})',
+        'hy': f'Armani ({ns["hy"]})',
+        'tl': 'Tagalog',
+        'ka': f'Joorjiya ({ns["ka"]})',
+        'am': f'Amxari ({ns["am"]})',
+        'kn': f'Kannada ({ns["kn"]})',
+        'yo': 'Yoruba',
+        'gu': f'Gujarati ({ns["gu"]})',
+        'ha': 'Hausa',
+        'jv': 'Jawa',
+        'ur': f'Urdu ({ns["ur"]})',
+        'te': f'Telugu ({ns["te"]})',
+        'mr': f'Marathi ({ns["mr"]})',
+        'ml': f'Malayalam ({ns["ml"]})',
+        'la': 'Laatiini',
+        'eu': 'Basque',
+        'fi': 'Finiish',
+        'mn': 'Mongolian (Latin)',
+        'tt': f'Tatar ({ns["tt"]})',
+        'kk': f'Kazakh ({ns["kk"]})',
+        'ky': f'Kyrgyz ({ns["ky"]})',
+        'cs': 'Czech',
+        'ro': 'Romanian',
+        'ku': f'Kurdish ({ns["ku"]})',
+        'af': 'Afrikaans',
+        'ca': 'Català',
+        'bg': 'Bulgarian',
+        'my': f'Myanmar ({ns["my"]})',
+        'bs': 'Bosanski',
+        'hr': 'Hrvatski',
+        'ps': f'({ns["ps"]})',
+        'ig': 'Igbo',
+        'so': 'Somali',
+    }
+
     return t
 
 
@@ -2266,7 +2335,7 @@ def main():
     translations = build_translations(ns)
 
     # Locales whose footers are fully translated into the target language
-    full_replace_locales = ['af', 'am', 'bg', 'ca', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'my', 'ps', 'sr', 'te', 'tl', 'uk', 'yo']
+    full_replace_locales = ['af', 'am', 'bg', 'ca', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'my', 'ps', 'so', 'sr', 'te', 'tl', 'uk', 'yo']
     # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
