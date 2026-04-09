@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'id', 'pl', 'nl', 'sv',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'gu', 'ha', 'jv', 'ur', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', '--help'
+    'yo', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', '--help'
 ]
 
 def get_href(lang):
@@ -1049,6 +1049,69 @@ def build_translations(ns):
         'uk': 'یوکرینی (Українська)',
     }
 
+    # Pashto (ps) - full replacement
+    t['ps'] = {
+        'en': 'انګلیسي',
+        'es': 'سپاینی',
+        'de': 'جرمن',
+        'fr': 'فرانسوي',
+        'ja': f'جاپاني ({ns["ja"]})',
+        'it': 'ایټالوی',
+        'ru': f'روسي ({ns["ru"]})',
+        'sr': 'سربیایي',
+        'uk': 'اوکراینی (Українська)',
+        'zh': f'چینی ({ns["zh"]})',
+        'he': f'عبري ({ns["he"]})',
+        'th': f'تایلنډي ({ns["th"]})',
+        'vi': f'ویتنامي ({ns["vi"]})',
+        'ar': f'عربي ({ns["ar"]})',
+        'hi': f'هندي ({ns["hi"]})',
+        'el': f'یوناني ({ns["el"]})',
+        'ko': f'کوریایی ({ns["ko"]})',
+        'pt': 'پرتګالی',
+        'bn': f'بنګالي ({ns["bn"]})',
+        'pa': f'پنجابي ({ns["pa"]})',
+        'fa': f'فارسي ({ns["fa"]})',
+        'sw': 'سواهیلي',
+        'id': 'اندونیزیاوي',
+        'pl': 'پولنډي',
+        'nl': 'هالنډي',
+        'sv': 'سویډني',
+        'tr': f'ترکي ({ns["tr"]})',
+        'hu': 'مجارستاني',
+        'new': f'نیپال بهاسا ({ns["new"]})',
+        'bo': f'لهاسا تیبتی ({ns["bo"]})',
+        'si': f'سنهالي ({ns["si"]})',
+        'or': f'اودی ({ns["or"]})',
+        'ta': f'تامیل ({ns["ta"]})',
+        'hy': f'ارمني ({ns["hy"]})',
+        'tl': 'ټاګالوګ',
+        'ka': f'ګرجستاني ({ns["ka"]})',
+        'am': f'امهری ({ns["am"]})',
+        'kn': f'کانناډا ({ns["kn"]})',
+        'yo': 'یوروبه',
+        'gu': f'ګجراتي ({ns["gu"]})',
+        'ha': 'هاوسا',
+        'jv': 'جاوا',
+        'ur': f'اردو ({ns["ur"]})',
+        'te': f'تلوګو ({ns["te"]})',
+        'mr': f'ماراټي ({ns["mr"]})',
+        'ml': 'مالایالام (മlayalamml)',
+        'la': 'لاطیني',
+        'eu': 'باسکي',
+        'fi': 'فنلنډي',
+        'mn': 'منګولي (Latin)',
+        'tt': f'تاتاري ({ns["tt"]})',
+        'kk': f'قزاقي ({ns["kk"]})',
+        'ky': f'کرغیزي ({ns["ky"]})',
+        'cs': 'چیکي',
+        'ro': 'رومانیایی',
+        'ku': 'کردي (Kurmancî)',
+        'bs': 'Bosanski',
+        'hr': 'Hrvatski',
+        'ps': 'پښتو',
+    }
+
     # Armenian (hy) - tl, ka, am, kn, yo, gu, ha, jv, ur, te, mr
     # Armenian Unicode constants
     t['hy'] = {
@@ -1722,7 +1785,7 @@ def main():
     translations = build_translations(ns)
 
     # Files needing full replacement
-    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'hr', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'sr', 'te', 'tl', 'uk', 'yo']
+    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'hr', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'ps', 'sr', 'te', 'tl', 'uk', 'yo']
     # All other locales with partial replacements
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
