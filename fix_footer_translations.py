@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'id', 'pl', 'nl', 'sv',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', '--help'
+    'yo', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku',
 ]
 
 def get_href(lang):
@@ -18,7 +18,11 @@ def get_href(lang):
 
 
 def extract_native_scripts():
-    """Extract native self-link text from each language file."""
+    """Extract native self-link text from each language file.
+
+    Looks for the footer language-switcher line (identified by multiple &nbsp;|&nbsp;
+    separators) and extracts the text of the self-link (href=#).
+    """
     ns = {}
     for lang in LANG_ORDER:
         fn = os.path.join(WORKDIR, get_href(lang))
@@ -27,14 +31,12 @@ def extract_native_scripts():
         with open(fn, 'r', encoding='utf-8') as f:
             content = f.read()
         for line in content.split('\n'):
-            if 'href=#>' in line and ('href=index-mr' in line or 'href=index-te' in line or 'href=index-es' in line):
-                pairs = re.findall(r'href=([^>]+)>([^<]+)</a>', line)
-                for href, text in pairs:
-                    if '#' in href:
-                        m = re.search(r'\((.+?)\)\s*$', text)
-                        ns[lang] = m.group(1) if m else text
-                        break
-                if lang in ns:
+            if '&nbsp;|&nbsp;' in line and 'href=#>' in line and line.count('href=') >= 10:
+                m = re.search(r'href=#>([^<]+)</a>', line)
+                if m:
+                    text = m.group(1)
+                    paren_m = re.search(r'\((.+?)\)\s*$', text)
+                    ns[lang] = paren_m.group(1) if paren_m else text
                     break
     return ns
 
@@ -1804,6 +1806,84 @@ def fix_kn_footer(content, kn_translations):
     return '\n'.join(new_lines)
 
 
+def get_source_footer_texts():
+    """Read the English footer link texts from index.html as fallback labels."""
+    fn = os.path.join(WORKDIR, 'index.html')
+    with open(fn, 'r', encoding='utf-8') as f:
+        content = f.read()
+    texts = {}
+    for line in content.split('\n'):
+        if '&nbsp;|&nbsp;' in line and line.count('href=') >= 10:
+            for m in re.finditer(r'<a href=([^>]+)>([^<]+)</a>', line):
+                href, text = m.group(1), m.group(2)
+                if href == '#':
+                    texts['en'] = text
+                else:
+                    m2 = re.match(r'index-([^.]+)\.html', href)
+                    if m2:
+                        texts[m2.group(1)] = text
+            break
+    return texts
+
+
+def ensure_footer_links(content, locale):
+    """Insert any missing language links into the footer language-switcher line.
+
+    Detects the footer line by looking for a <p> with many &nbsp;|&nbsp; separators.
+    Any language in LANG_ORDER that is not yet present is inserted at the correct
+    position using the English label from index.html as a placeholder; subsequent
+    translation passes will replace the placeholder with the proper translated text.
+
+    Returns the (possibly updated) content string.
+    """
+    lines = content.split('\n')
+    idx = None
+    for i, line in enumerate(lines):
+        if '&nbsp;|&nbsp;' in line and '<a href=#>' in line and line.count('href=') >= 10:
+            idx = i
+            break
+    if idx is None:
+        return content
+
+    line = lines[idx]
+
+    # Parse existing anchors
+    existing = {}
+    for m in re.finditer(r'<a href=([^>]+)>([^<]+)</a>', line):
+        href, text = m.group(1), m.group(2)
+        if href == '#':
+            existing[locale] = text
+        elif href == 'index.html':
+            existing['en'] = text
+        else:
+            m2 = re.match(r'index-([^.]+)\.html', href)
+            if m2:
+                existing[m2.group(1)] = text
+
+    missing = [lang for lang in LANG_ORDER if lang != locale and lang not in existing]
+    if not missing:
+        return content
+
+    source = get_source_footer_texts()
+    for lang in missing:
+        existing[lang] = source.get(lang, lang)
+
+    # Rebuild the line in LANG_ORDER, preserving indentation
+    indent = re.match(r'^\s*', line).group(0)
+    parts = []
+    for lang in LANG_ORDER:
+        if lang not in existing and lang != locale:
+            continue
+        href = '#' if lang == locale else get_href(lang)
+        text = existing.get(lang, '')
+        if not text:
+            continue
+        parts.append(f'<a href={href}>{text}</a>')
+
+    lines[idx] = indent + '<p>' + '&nbsp;|&nbsp; '.join(parts) + '</p>'
+    return '\n'.join(lines)
+
+
 def process_file(locale, replacements, translations_for_full=None):
     """Process a single HTML file."""
     fn = os.path.join(WORKDIR, get_href(locale))
@@ -1816,19 +1896,40 @@ def process_file(locale, replacements, translations_for_full=None):
 
     original = content
 
+    # Ensure all expected language links are present before translating
+    content = ensure_footer_links(content, locale)
+
     if locale == 'kn':
         content = fix_kn_footer(content, translations_for_full)
     else:
         lines = content.split('\n')
         new_lines = []
         for line in lines:
-            if ('href=index.html>' in line and
-                    ('href=index-mr' in line or 'href=index-te' in line or
-                     ('href=index-es' in line and '&nbsp;|&nbsp;' in line)) and
-                    '&nbsp;|&nbsp;' in line):
+            if ('&nbsp;|&nbsp;' in line and '<a href=#>' in line and
+                    line.count('href=') >= 10):
                 line = update_footer_line(line, locale, replacements)
             new_lines.append(line)
         content = '\n'.join(new_lines)
+
+    if content != original:
+        with open(fn, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f'  Updated: {fn}')
+    else:
+        print(f'  No changes: {fn}')
+
+def ensure_links_only(locale):
+    """Run only the ensure_footer_links step for a locale (no translation update)."""
+    fn = os.path.join(WORKDIR, get_href(locale))
+    if not os.path.exists(fn):
+        print(f'  SKIP: {fn} not found')
+        return
+
+    with open(fn, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    original = content
+    content = ensure_footer_links(content, locale)
 
     if content != original:
         with open(fn, 'w', encoding='utf-8') as f:
@@ -1846,15 +1947,19 @@ def main():
     print('Building translation table...')
     translations = build_translations(ns)
 
-    # Files needing full replacement
+    # Locales whose footers are fully translated into the target language
     full_replace_locales = ['am', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'ps', 'sr', 'te', 'tl', 'uk', 'yo']
-    # All other locales with partial replacements
+    # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
         'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'hy',
         'de', 'es', 'fr', 'hu', 'id', 'it', 'jv', 'new', 'bo', 'pl', 'pt',
         'sv', 'sw', 'tr', 'tt', 'ky', 'cs',
     ]
+    # Locales already fully translated whose footers only need link-insertion if new
+    # languages are added (bs, ku, ro have no entries in the translation table since
+    # their footers were hand-translated; en is the source of truth).
+    ensure_only_locales = ['en', 'bs', 'ku', 'ro']
 
     print('\nProcessing full-replacement files...')
     for locale in full_replace_locales:
@@ -1870,6 +1975,11 @@ def main():
             process_file(locale, replacements)
         else:
             print(f'    Skipped (no replacements defined)')
+
+    print('\nEnsuring link completeness for remaining files...')
+    for locale in ensure_only_locales:
+        print(f'  {locale}:')
+        ensure_links_only(locale)
 
     print('\nDone!')
 
