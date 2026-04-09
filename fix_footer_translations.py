@@ -1552,6 +1552,67 @@ def build_translations(ns):
         'ro': 'Румунски',
     }
 
+    t['hr'] = {
+        'en': 'Engleski',
+        'es': 'Španjolski',
+        'de': 'Njemački',
+        'fr': 'Francuski',
+        'ja': f'Japanski ({ns["ja"]})',
+        'it': 'Talijanski',
+        'ru': f'Ruski ({ns["ru"]})',
+        'sr': f'Srpski ({ns["sr"]})',
+        'bs': 'Bosanski',
+        'hr': 'Hrvatski',
+        'uk': f'Ukrajinski ({ns["uk"]})',
+        'zh': f'Kineski ({ns["zh"]})',
+        'he': f'Hebrejski ({ns["he"]})',
+        'th': f'Tajlandski ({ns["th"]})',
+        'vi': f'Vijetnamski ({ns["vi"]})',
+        'ar': f'Arapski ({ns["ar"]})',
+        'hi': f'Hindi ({ns["hi"]})',
+        'el': f'Grčki ({ns["el"]})',
+        'ko': f'Korejski ({ns["ko"]})',
+        'pt': 'Portugalski',
+        'bn': f'Bengalski ({ns["bn"]})',
+        'pa': f'Pandžabi ({ns["pa"]})',
+        'fa': f'Perzijski ({ns["fa"]})',
+        'sw': 'Svahili',
+        'id': 'Indonežanski',
+        'pl': 'Poljski',
+        'nl': 'Nizozemski',
+        'sv': 'Švedski',
+        'tr': f'Turski ({ns["tr"]})',
+        'hu': 'Mađarski',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'Lhasa Tibetski ({ns["bo"]})',
+        'si': f'Singaleški ({ns["si"]})',
+        'or': f'Odia ({ns["or"]})',
+        'ta': f'Tamilski ({ns["ta"]})',
+        'hy': f'Jermenski ({ns["hy"]})',
+        'tl': 'Tagaloški',
+        'ka': f'Gruzijski ({ns["ka"]})',
+        'am': f'Amharski ({ns["am"]})',
+        'kn': f'Kannada ({ns["kn"]})',
+        'yo': 'Joruba',
+        'gu': f'Gudžarati ({ns["gu"]})',
+        'ha': 'Hausa',
+        'jv': 'Javanski',
+        'ur': f'Urdu ({ns["ur"]})',
+        'te': f'Telugu ({ns["te"]})',
+        'mr': f'Marati ({ns["mr"]})',
+        'ml': f'Malajalam ({ns["ml"]})',
+        'la': 'Latinski',
+        'eu': 'Baskijski',
+        'fi': 'Finski',
+        'mn': 'Mongolski (Latinica)',
+        'tt': f'Tatarski ({ns["tt"]})',
+        'kk': f'Kazaški ({ns["kk"]})',
+        'ky': f'Kirgiski ({ns["ky"]})',
+        'cs': 'Češki',
+        'ro': 'Rumunski',
+        'ku': f'Kurdski ({ns["ku"]})',
+    }
+
     return t
 
 
@@ -1661,7 +1722,7 @@ def main():
     translations = build_translations(ns)
 
     # Files needing full replacement
-    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'sr', 'te', 'tl', 'uk', 'yo']
+    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'hr', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'sr', 'te', 'tl', 'uk', 'yo']
     # All other locales with partial replacements
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
