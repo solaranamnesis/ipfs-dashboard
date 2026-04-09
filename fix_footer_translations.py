@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'id', 'pl', 'nl', 'sv',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku',
+    'yo', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af',
 ]
 
 def get_href(lang):
@@ -1740,6 +1740,70 @@ def build_translations(ns):
         'ku': f'Kurdski ({ns["ku"]})',
     }
 
+    t['af'] = {
+        'en': 'Engels',
+        'es': 'Spaans',
+        'de': 'Duits',
+        'fr': 'Frans',
+        'ja': f'Japans ({ns["ja"]})',
+        'it': 'Italiaans',
+        'ru': f'Russies ({ns["ru"]})',
+        'sr': f'Serwies ({ns["sr"]})',
+        'bs': 'Bosnies',
+        'hr': 'Kroaties',
+        'uk': f'Oekraïens ({ns["uk"]})',
+        'zh': f'Chinees ({ns["zh"]})',
+        'he': f'Hebreeus ({ns["he"]})',
+        'th': f'Thais ({ns["th"]})',
+        'vi': f'Viëtnamees ({ns["vi"]})',
+        'ar': f'Arabies ({ns["ar"]})',
+        'hi': f'Hindi ({ns["hi"]})',
+        'el': f'Grieks ({ns["el"]})',
+        'ko': f'Koreaans ({ns["ko"]})',
+        'pt': 'Portugees',
+        'bn': f'Bengaals ({ns["bn"]})',
+        'pa': f'Punjabi ({ns["pa"]})',
+        'fa': f'Persies ({ns["fa"]})',
+        'sw': 'Swahili',
+        'id': 'Indonesies',
+        'pl': 'Pools',
+        'nl': 'Nederlands',
+        'sv': 'Sweeds',
+        'tr': f'Turks ({ns["tr"]})',
+        'hu': 'Hongaars',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'Lhasa Tibettaans ({ns["bo"]})',
+        'si': f'Sinhalees ({ns["si"]})',
+        'or': f'Odia ({ns["or"]})',
+        'ta': f'Tamil ({ns["ta"]})',
+        'hy': f'Armeens ({ns["hy"]})',
+        'tl': 'Tagalog',
+        'ka': f'Georgies ({ns["ka"]})',
+        'am': f'Amharies ({ns["am"]})',
+        'kn': f'Kannada ({ns["kn"]})',
+        'yo': 'Yoruba',
+        'ig': 'Igbo',
+        'gu': f'Gujarati ({ns["gu"]})',
+        'ha': 'Hausa',
+        'jv': 'Java',
+        'ur': f'Urdu ({ns["ur"]})',
+        'ps': f'Pashto ({ns["ps"]})',
+        'te': f'Telugu ({ns["te"]})',
+        'mr': f'Marathi ({ns["mr"]})',
+        'ml': f'Malajaams ({ns["ml"]})',
+        'la': 'Latyn',
+        'eu': 'Baskies',
+        'fi': 'Fins',
+        'mn': 'Mongolies (Latin)',
+        'tt': f'Tataars ({ns["tt"]})',
+        'kk': f'Kazags ({ns["kk"]})',
+        'ky': f'Kirgisies ({ns["ky"]})',
+        'cs': 'Tsjeggies',
+        'ro': 'Roemeen',
+        'ku': f'Koerdies ({ns["ku"]})',
+        'af': 'Afrikaans',
+    }
+
     return t
 
 
@@ -1948,7 +2012,7 @@ def main():
     translations = build_translations(ns)
 
     # Locales whose footers are fully translated into the target language
-    full_replace_locales = ['am', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'ps', 'sr', 'te', 'tl', 'uk', 'yo']
+    full_replace_locales = ['af', 'am', 'fi', 'gu', 'ha', 'hr', 'ig', 'ka', 'kk', 'kn', 'la', 'ml', 'mn', 'mr', 'ps', 'sr', 'te', 'tl', 'uk', 'yo']
     # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
