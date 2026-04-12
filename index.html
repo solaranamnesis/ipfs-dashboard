@@ -3,7 +3,7 @@
 
 <head>
   <meta charset=utf-8>
-  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1.0">
+  <meta name=viewport content="width=device-width,initial-scale=1">
   <meta name=author content="Solar Anamnesis">
   <meta name=description content="High-resolution gigapixel thin section mosaics of meteorites — chondrites, achondrites, Martian, lunar, and more — under cross-polarized and visible light. Browse Flickr, download Creative Commons images, explore interactive krpano panoramas, and order prints.">
   <meta name=keywords content="meteorite thin sections, meteorite thin section photography, meteorite thin section photos, polished thin sections, petrographic thin sections, chondrites, achondrites, Martian meteorites, lunar meteorites, cross polarized light microscopy, gigapixel microscopy, meteorite microphotography, chondrules, Allende, Murchison, Chelyabinsk, Tissint, pallasite, iron meteorite, Creative Commons, CC BY-NC-ND, CC BY-NC-SA, CC0, free download, Flickr gallery, krpano, interactive panorama viewer, Galleria.js, meteorite prints, gigapixel mosaic photography">
@@ -16,6 +16,9 @@
   <meta property="og:title" content="Solar Anamnesis — Meteorite Thin Section Gigapixel Gallery">
   <meta property="og:description" content="High-resolution gigapixel mosaics of meteorite thin sections under polarized and visible light. Browse Flickr albums, download Creative Commons licensed images, explore interactive krpano panoramas, and order Galleria.js prints.">
   <meta property="og:image" content="https://www.solaranamnesis.com/style/images/art/NWA10646.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/webp">
   <meta property="og:url" content="https://www.solaranamnesis.com/">
   <meta property="og:site_name" content="Solar Anamnesis">
   <meta property="og:locale" content="en_US">
@@ -107,6 +110,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700%7CRoboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel=stylesheet>
+  <link rel="preload" as="image" type="image/webp" href="style/images/art/NWA10646.webp">
+  <link rel="preconnect" href="https://ipfs.solaranamnesis.com">
+  <link rel="preconnect" href="https://cdn.solaranamnesis.com">
   <style>
     @media (max-width: 480px) {
       .navbar-nav {
@@ -170,62 +176,91 @@
     {
       "@context": "https://schema.org",
       "@graph": [{
-        "@type": "WebSite",
-        "name": "Solar Anamnesis",
-        "url": "https://www.solaranamnesis.com/",
-        "description": "High-resolution gigapixel thin section mosaics of meteorites photographed under cross-polarized and visible light. Browse Flickr albums, download Creative Commons licensed images, explore interactive krpano panoramas, and order Galleria.js prints.",
-        "inLanguage": "en",
-        "author": {
-          "@type": "Person",
-          "name": "Solar Anamnesis"
-        }
-      }, {
-        "@type": "CollectionPage",
-        "name": "Meteorite Thin Section Gigapixel Gallery — Solar Anamnesis",
-        "url": "https://www.solaranamnesis.com/",
-        "description": "A collection of high-resolution gigapixel mosaics of polished meteorite thin sections photographed under cross-polarized (XPL) and visible light using a petrographic microscope. Specimens include chondrites, achondrites, Martian meteorites, lunar meteorites, pallasites, mesosiderites, and iron meteorites. Images available under Creative Commons licenses (CC BY-NC-ND, CC BY-NC-SA, CC0). Browse on Flickr, explore interactive krpano panoramas, and order prints from the Galleria.js store.",
-        "inLanguage": "en",
-        "keywords": "meteorite thin sections, chondrites, achondrites, Martian meteorites, lunar meteorites, cross polarized light, gigapixel microscopy, petrographic thin sections, polarized light microscopy, chondrules, Creative Commons, CC BY-NC-ND, CC BY-NC-SA, CC0, Flickr gallery, krpano panorama, Galleria.js, free download, meteorite prints",
-        "license": [
-          "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-          "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "https://creativecommons.org/publicdomain/zero/1.0/"
-        ],
-        "about": {
-          "@type": "Thing",
-          "name": "Meteorite Thin Sections",
-          "description": "Polished thin sections of meteorites viewed under polarized light microscopy, revealing the mineralogy and texture of extraterrestrial rocks."
+          "@type": "WebSite",
+          "name": "Solar Anamnesis",
+          "url": "https://www.solaranamnesis.com/",
+          "description": "High-resolution gigapixel thin section mosaics of meteorites photographed under cross-polarized and visible light. Browse Flickr albums, download Creative Commons licensed images, explore interactive krpano panoramas, and order Galleria.js prints.",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Person",
+            "name": "Solar Anamnesis",
+            "sameAs": [
+              "https://www.flickr.com/people/solaranamnesis/",
+              "https://github.com/solaranamnesis",
+              "https://blog.solaranamnesis.com",
+              "https://solaranamnesis.tumblr.com",
+              "https://peakd.com/@solar-anamnesis",
+              "https://archive.org/details/@solaranamnesis",
+              "https://store.solaranamnesis.com",
+              "https://opensea.io/SolarAnamnesis"
+            ]
+          },
+          "sameAs": [
+            "https://www.flickr.com/people/solaranamnesis/",
+            "https://github.com/solaranamnesis",
+            "https://blog.solaranamnesis.com",
+            "https://solaranamnesis.tumblr.com",
+            "https://peakd.com/@solar-anamnesis",
+            "https://archive.org/details/@solaranamnesis",
+            "https://store.solaranamnesis.com",
+            "https://opensea.io/SolarAnamnesis"
+          ]
         },
-        "mentions": [{
-          "@type": "Thing",
-          "name": "Allende (CV3 carbonaceous chondrite)"
-        }, {
-          "@type": "Thing",
-          "name": "Murchison (CM2 carbonaceous chondrite)"
-        }, {
-          "@type": "Thing",
-          "name": "Chelyabinsk (LL5 ordinary chondrite)"
-        }, {
-          "@type": "Thing",
-          "name": "Tissint (Martian shergottite)"
-        }, {
-          "@type": "Thing",
-          "name": "Zagami (Martian shergottite)"
-        }, {
-          "@type": "Thing",
-          "name": "Pasamonte (eucrite achondrite)"
-        }]
-      }, {
-        "@type": "ImageGallery",
-        "name": "Meteorite Thin Section Flickr Gallery",
-        "url": "https://www.flickr.com/people/solaranamnesis/",
-        "description": "Browse and download high-resolution meteorite thin section photographs organized by meteorite type. Images available under Creative Commons licenses (CC BY-NC-ND, CC BY-NC-SA, CC0).",
-        "license": [
-          "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-          "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-          "https://creativecommons.org/publicdomain/zero/1.0/"
-        ]
-      }]
+        {
+          "@type": "CollectionPage",
+          "name": "Meteorite Thin Section Gigapixel Gallery — Solar Anamnesis",
+          "url": "https://www.solaranamnesis.com/",
+          "description": "A collection of high-resolution gigapixel mosaics of polished meteorite thin sections photographed under cross-polarized (XPL) and visible light using a petrographic microscope. Specimens include chondrites, achondrites, Martian meteorites, lunar meteorites, pallasites, mesosiderites, and iron meteorites. Images available under Creative Commons licenses (CC BY-NC-ND, CC BY-NC-SA, CC0). Browse on Flickr, explore interactive krpano panoramas, and order prints from the Galleria.js store.",
+          "inLanguage": "en",
+          "keywords": "meteorite thin sections, chondrites, achondrites, Martian meteorites, lunar meteorites, cross polarized light, gigapixel microscopy, petrographic thin sections, polarized light microscopy, chondrules, Creative Commons, CC BY-NC-ND, CC BY-NC-SA, CC0, Flickr gallery, krpano panorama, Galleria.js, free download, meteorite prints",
+          "license": [
+            "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+            "https://creativecommons.org/publicdomain/zero/1.0/"
+          ],
+          "about": {
+            "@type": "Thing",
+            "name": "Meteorite Thin Sections",
+            "description": "Polished thin sections of meteorites viewed under polarized light microscopy, revealing the mineralogy and texture of extraterrestrial rocks."
+          },
+          "mentions": [{
+              "@type": "Thing",
+              "name": "Allende (CV3 carbonaceous chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Murchison (CM2 carbonaceous chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Chelyabinsk (LL5 ordinary chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Tissint (Martian shergottite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Zagami (Martian shergottite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Pasamonte (eucrite achondrite)"
+            }
+          ]
+        },
+        {
+          "@type": "ImageGallery",
+          "name": "Meteorite Thin Section Flickr Gallery",
+          "url": "https://www.flickr.com/people/solaranamnesis/",
+          "description": "Browse and download high-resolution meteorite thin section photographs organized by meteorite type. Images available under Creative Commons licenses (CC BY-NC-ND, CC BY-NC-SA, CC0).",
+          "license": [
+            "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+            "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+            "https://creativecommons.org/publicdomain/zero/1.0/"
+          ]
+        }
+      ]
     }
   </script>
 </head>
