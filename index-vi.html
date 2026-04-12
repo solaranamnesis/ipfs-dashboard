@@ -3,7 +3,7 @@
 
 <head>
   <meta charset=utf-8>
-  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1.0">
+  <meta name=viewport content="width=device-width,initial-scale=1">
   <meta name=author content="Solar Anamnesis">
   <meta name=description content="Khám phá thế giới thú vị của thiên thạch với Solar Anamnesis. Khám phá những bức ảnh vi mô độ phân giải cao ở mức gigapixel, nghiên cứu sâu về lịch sử của thiên thạch, và mua các tệp tải xuống cũng như bản in của những lát cắt ấn tượng. Tham gia cùng chúng tôi để khám phá những bí mật của vũ trụ!">
   <meta name=keywords content="mặt cắt mỏng thiên thạch, chụp ảnh mặt cắt mỏng thiên thạch, ảnh mặt cắt mỏng thiên thạch, mặt cắt mỏng đánh bóng, mặt cắt mỏng thạch học, chondrit, achondrit, thiên thạch sao Hỏa, thiên thạch Mặt Trăng, kính hiển vi ánh sáng phân cực chéo, kính hiển vi gigapixel, vi ảnh thiên thạch, chondrule, Allende, Murchison, Chelyabinsk, Tissint, palasit, thiên thạch sắt, Solar Anamnesis, Creative Commons, CC BY-NC-ND, CC BY-NC-SA, CC0, Flickr, krpano, Galleria.js, gigapixel mosaic, interactive panorama, free download">
@@ -16,6 +16,9 @@
   <meta property="og:title" content="Solar Anamnesis — Thư Viện Gigapixel Mặt Cắt Mỏng Thiên Thạch">
   <meta property="og:description" content="Ảnh ghép gigapixel độ phân giải cao của các mặt cắt mỏng thiên thạch — chondrit, achondrit, thiên thạch sao Hỏa, mặt trăng và nhiều hơn nữa — chụp dưới ánh sáng phân cực chéo và ánh sáng thường.">
   <meta property="og:image" content="https://www.solaranamnesis.com/style/images/art/NWA10646.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/webp">
   <meta property="og:url" content="https://www.solaranamnesis.com/index-vi.html">
   <meta property="og:site_name" content="Solar Anamnesis">
   <meta property="og:locale" content="vi_VN">
@@ -107,6 +110,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700%7CRoboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel=stylesheet>
+  <link rel="preload" as="image" type="image/webp" href="style/images/art/NWA10646.webp">
+  <link rel="preconnect" href="https://ipfs.solaranamnesis.com">
+  <link rel="preconnect" href="https://cdn.solaranamnesis.com">
   <style>
     @media (max-width: 480px) {
       .navbar-nav {
@@ -177,8 +183,28 @@
           "inLanguage": "vi",
           "author": {
             "@type": "Person",
-            "name": "Solar Anamnesis"
-          }
+            "name": "Solar Anamnesis",
+            "sameAs": [
+              "https://www.flickr.com/people/solaranamnesis/",
+              "https://github.com/solaranamnesis",
+              "https://blog.solaranamnesis.com",
+              "https://solaranamnesis.tumblr.com",
+              "https://peakd.com/@solar-anamnesis",
+              "https://archive.org/details/@solaranamnesis",
+              "https://store.solaranamnesis.com",
+              "https://opensea.io/SolarAnamnesis"
+            ]
+          },
+          "sameAs": [
+            "https://www.flickr.com/people/solaranamnesis/",
+            "https://github.com/solaranamnesis",
+            "https://blog.solaranamnesis.com",
+            "https://solaranamnesis.tumblr.com",
+            "https://peakd.com/@solar-anamnesis",
+            "https://archive.org/details/@solaranamnesis",
+            "https://store.solaranamnesis.com",
+            "https://opensea.io/SolarAnamnesis"
+          ]
         },
         {
           "@type": "CollectionPage",
@@ -196,7 +222,32 @@
             "@type": "Thing",
             "name": "Meteorite Thin Sections",
             "description": "Polished thin sections of meteorites viewed under polarized light microscopy."
-          }
+          },
+          "mentions": [{
+              "@type": "Thing",
+              "name": "Allende (CV3 carbonaceous chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Murchison (CM2 carbonaceous chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Chelyabinsk (LL5 ordinary chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Tissint (Martian shergottite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Zagami (Martian shergottite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Pasamonte (eucrite achondrite)"
+            }
+          ]
         },
         {
           "@type": "ImageGallery",
@@ -207,6 +258,21 @@
             "https://creativecommons.org/licenses/by-nc-nd/4.0/",
             "https://creativecommons.org/licenses/by-nc-sa/4.0/",
             "https://creativecommons.org/publicdomain/zero/1.0/"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.solaranamnesis.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tiếng Việt"
+            }
           ]
         }
       ]

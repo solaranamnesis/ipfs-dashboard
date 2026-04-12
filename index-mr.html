@@ -3,7 +3,7 @@
 
 <head>
   <meta charset=utf-8>
-  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1.0">
+  <meta name=viewport content="width=device-width,initial-scale=1">
   <meta name=author content="Solar Anamnesis">
   <meta name=description content="उल्कापातांच्या उच्च रिझोल्यूशन गिगापिक्सल थिन सेक्शन मोझेक — चॉन्ड्राइट्स, ॲचॉन्ड्राइट्स, मंगळ, चंद्र आणि इतर — क्रॉस-पोलराइज्ड आणि दृश्यमान प्रकाशाखाली पाहिले जाते.">
   <meta name=keywords content="उल्कापात थिन सेक्शन, उल्कापात थिन सेक्शन फोटोग्राफी, उल्कापात थिन सेक्शन फोटो, पॉलिश थिन सेक्शन, पेट्रोग्राफिक थिन सेक्शन, चॉन्ड्राइट्स, ॲचॉन्ड्राइट्स, मंगळाचे उल्कापात, चंद्राचे उल्कापात, क्रॉस पोलराइज्ड लाइट मायक्रोस्कोपी, गिगापिक्सल मायक्रोस्कोपी, उल्कापात मायक्रोफोटोग्राफी, चॉन्ड्रूल्स, Allende, Murchison, Chelyabinsk, Tissint, पॅलासाइट, लोह उल्कापात, सोलर ॲनम्नेसिस, Creative Commons, CC BY-NC-ND, CC BY-NC-SA, CC0, Flickr, krpano, Galleria.js, gigapixel mosaic, interactive panorama, free download">
@@ -16,6 +16,9 @@
   <meta property="og:title" content="सोलर ॲनम्नेसिस — उल्कापात पातळी थिन सेक्शन गिगापिक्सल गॅलरी">
   <meta property="og:description" content="ध्रुवीकृत आणि दृश्यमान प्रकाशाखाली फोटोग्राफ केलेल्या उल्कापात थिन सेक्शन्सचे उच्च रिझोल्यूशन गिगापिक्सल मोझेक. चॉन्ड्राइट्स, ॲचॉन्ड्राइट्स, मंगळ, चंद्र आणि इतर.">
   <meta property="og:image" content="https://www.solaranamnesis.com/style/images/art/NWA10646.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/webp">
   <meta property="og:url" content="https://www.solaranamnesis.com/index-mr.html">
   <meta property="og:site_name" content="Solar Anamnesis">
   <meta property="og:locale" content="mr_IN">
@@ -107,6 +110,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700%7CRoboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel=stylesheet>
+  <link rel="preload" as="image" type="image/webp" href="style/images/art/NWA10646.webp">
+  <link rel="preconnect" href="https://ipfs.solaranamnesis.com">
+  <link rel="preconnect" href="https://cdn.solaranamnesis.com">
   <style>
     @media (max-width: 480px) {
       .navbar-nav {
@@ -177,8 +183,28 @@
           "inLanguage": "mr",
           "author": {
             "@type": "Person",
-            "name": "Solar Anamnesis"
-          }
+            "name": "Solar Anamnesis",
+            "sameAs": [
+              "https://www.flickr.com/people/solaranamnesis/",
+              "https://github.com/solaranamnesis",
+              "https://blog.solaranamnesis.com",
+              "https://solaranamnesis.tumblr.com",
+              "https://peakd.com/@solar-anamnesis",
+              "https://archive.org/details/@solaranamnesis",
+              "https://store.solaranamnesis.com",
+              "https://opensea.io/SolarAnamnesis"
+            ]
+          },
+          "sameAs": [
+            "https://www.flickr.com/people/solaranamnesis/",
+            "https://github.com/solaranamnesis",
+            "https://blog.solaranamnesis.com",
+            "https://solaranamnesis.tumblr.com",
+            "https://peakd.com/@solar-anamnesis",
+            "https://archive.org/details/@solaranamnesis",
+            "https://store.solaranamnesis.com",
+            "https://opensea.io/SolarAnamnesis"
+          ]
         },
         {
           "@type": "CollectionPage",
@@ -196,7 +222,32 @@
             "@type": "Thing",
             "name": "Meteorite Thin Sections",
             "description": "Polished thin sections of meteorites viewed under polarized light microscopy."
-          }
+          },
+          "mentions": [{
+              "@type": "Thing",
+              "name": "Allende (CV3 carbonaceous chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Murchison (CM2 carbonaceous chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Chelyabinsk (LL5 ordinary chondrite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Tissint (Martian shergottite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Zagami (Martian shergottite)"
+            },
+            {
+              "@type": "Thing",
+              "name": "Pasamonte (eucrite achondrite)"
+            }
+          ]
         },
         {
           "@type": "ImageGallery",
@@ -207,6 +258,21 @@
             "https://creativecommons.org/licenses/by-nc-nd/4.0/",
             "https://creativecommons.org/licenses/by-nc-sa/4.0/",
             "https://creativecommons.org/publicdomain/zero/1.0/"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.solaranamnesis.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "मराठी"
+            }
           ]
         }
       ]
