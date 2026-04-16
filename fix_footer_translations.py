@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'pl', 'nl', 'sv', 'no', 'da',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az',
+    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu',
 ]
 
 def get_href(lang):
@@ -2773,6 +2773,82 @@ def build_translations(ns):
         'az': f'Azeră ({ns["az"]})',
     }
 
+    # Quechua (qu) - full translation of all language names in Quechua
+    t['qu'] = {
+        'en': 'Inglés',
+        'es': 'Español',
+        'de': 'Alemán',
+        'fr': 'Francés',
+        'ja': f'Japonés ({ns["ja"]})',
+        'it': 'Italiano',
+        'ru': f'Ruso ({ns["ru"]})',
+        'sr': f'Serbio ({ns["sr"]})',
+        'bs': 'Bosanski',
+        'hr': 'Hrvatski',
+        'uk': f'Ucraniano ({ns["uk"]})',
+        'zh': f'Chino ({ns["zh"]})',
+        'he': f'Hebreo ({ns["he"]})',
+        'th': f'Tailandés ({ns["th"]})',
+        'vi': f'Vietnamés ({ns["vi"]})',
+        'ar': f'Árabe ({ns["ar"]})',
+        'hi': f'Hindi ({ns["hi"]})',
+        'el': f'Griego ({ns["el"]})',
+        'ko': f'Coreano ({ns["ko"]})',
+        'pt': 'Portugués',
+        'bn': f'Bengalí ({ns["bn"]})',
+        'pa': f'Punjabi ({ns["pa"]})',
+        'fa': f'Persa ({ns["fa"]})',
+        'sw': 'Suajili',
+        'so': 'Somalí',
+        'id': 'Indonés',
+        'pl': 'Polaco',
+        'nl': 'Neerlandés',
+        'sv': 'Sueco',
+        'no': 'Noruego',
+        'da': 'Danés',
+        'tr': f'Turco ({ns["tr"]})',
+        'hu': 'Húngaro',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'Tibetano ({ns["bo"]})',
+        'si': f'Cingalés ({ns["si"]})',
+        'or': f'Odia ({ns["or"]})',
+        'ta': f'Tamil ({ns["ta"]})',
+        'hy': f'Armenio ({ns["hy"]})',
+        'tl': 'Tagalo',
+        'ka': f'Georgiano ({ns["ka"]})',
+        'am': f'Amhárico ({ns["am"]})',
+        'kn': f'Canarés ({ns["kn"]})',
+        'yo': 'Yoruba',
+        'zu': 'IsiZulu',
+        'ig': 'Igbo',
+        'gu': f'Gujarati ({ns["gu"]})',
+        'ha': 'Hausa',
+        'jv': 'Javanés',
+        'ur': f'Urdu ({ns["ur"]})',
+        'ps': f'Pashto ({ns["ps"]})',
+        'te': f'Telugu ({ns["te"]})',
+        'mr': f'Marathi ({ns["mr"]})',
+        'mg': 'Malagasy',
+        'my': f'Birmano ({ns["my"]})',
+        'bg': 'Búlgaro',
+        'ml': 'Malayalam (മlayalamml)',
+        'la': 'Latín',
+        'eu': 'Euskara',
+        'fi': 'Finés',
+        'mn': 'Mongol (Latin)',
+        'tt': f'Tártaro ({ns["tt"]})',
+        'kk': f'Kazajo ({ns["kk"]})',
+        'ky': f'Kirguís ({ns["ky"]})',
+        'cs': 'Checo',
+        'ro': 'Rumano',
+        'ku': f'Kurdo ({ns["ku"]})',
+        'af': 'Afrikaans',
+        'ca': 'Català',
+        'ht': 'Kreyòl',
+        'az': f'Azerbaiyano ({ns["az"]})',
+        'qu': 'Runa Simi (Quechua)',
+    }
+
     t['mg'] = {
         'en': 'Anglisy',
         'es': 'Espagnol',
@@ -3055,7 +3131,7 @@ def main():
     translations = build_translations(ns)
 
     # Locales whose footers are fully translated into the target language
-    full_replace_locales = ['af', 'am', 'bg', 'bs', 'ca', 'da', 'fi', 'gu', 'ha', 'hr', 'ht', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'ml', 'mn', 'mr', 'mg', 'my', 'ps', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
+    full_replace_locales = ['af', 'am', 'bg', 'bs', 'ca', 'da', 'fi', 'gu', 'ha', 'hr', 'ht', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'ml', 'mn', 'mr', 'mg', 'my', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
     # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
