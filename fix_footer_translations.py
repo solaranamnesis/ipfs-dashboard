@@ -10,7 +10,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'pl', 'nl', 'sv', 'no', 'da',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az',
+    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az',
 ]
 
 def get_href(lang):
@@ -2770,7 +2770,7 @@ def main():
     # Locales already fully translated whose footers only need link-insertion if new
     # languages are added (bs, ku, ro have no entries in the translation table since
     # their footers were hand-translated; en is the source of truth).
-    ensure_only_locales = ['en', 'bs', 'ku', 'ro']
+    ensure_only_locales = ['en', 'bs', 'ku', 'ro', 'mg']
 
     print('\nProcessing full-replacement files...')
     for locale in full_replace_locales:
