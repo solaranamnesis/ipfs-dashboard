@@ -6,7 +6,7 @@
 	
 	<!-- add the combox plugin for the bottom left combo box -->
 	<include url="../plugins/combobox.xml"/>
-	<include url="../scenes.xml"/>
+	<include url="../scenes%$opt_lang%.xml"/>
 	<include url="../custom-combobox.xml"/>
 	
 	<!-- preview pano image -->
