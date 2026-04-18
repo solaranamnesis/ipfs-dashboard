@@ -1,0 +1,46 @@
+<krpano>
+	<!-- some custom example designs -->
+	<combobox_design name="glas" margin="2" open_close_speed="0.25">
+		<style name="combobox_container_style"
+			bgcolor="0xEEEEEE"
+			bgalpha="0.5"
+			bgborder="1 0x333333 0.5"
+			bgroundedge="5"
+			bgshadow="0 4 10 0x000000 0.3"
+			height="50"
+			/>
+		<style name="combobox_marker_style"
+			css="color:#222222;"
+			alpha="0.7"
+			bg="false"
+			txtshadow=""
+			/>
+		<style name="combobox_item_style"
+			css="color:#222222;"
+			padding="4"
+			bg="false"
+			bgborder="1 0x333333 0.0"
+			bgcolor="0xFFFFFF"
+			bgalpha="1"
+			bgroundedge="3"
+			txtshadow=""
+			onoveritem="set(bg,true); set(bgborder, '1 0x333333 0.5');"
+			onoutitem="set(bg,false); set(bgborder, '1 0x333333 0.0');"
+			/>
+	</combobox_design>
+
+	<!-- mixed static/dynamic example - add items dynamically -->
+	<combobox name="cbscenes" design="glas" align="lefttop" x="10" y="10" onloaded="add_scene_items();" />
+	<action name="add_scene_items" scope="local" autorun="onstart">
+		for(set(i,0), i LT scene.count, inc(i),
+			caller.additem(calc('[img src=[dq]' + scene[get(i)].thumburl +  '[dq] style=[dq]border:1px solid rgba(255,255,255,0.5);width:48px;height:32px;vertical-align:middle;margin-right:8px;[dq]/] '+scene[get(i)].title), calc('loadscene('+i+',null,MERGE,BLEND(0.5));' + 'flatpano_startup();') );
+		);
+	</action>
+	<!-- Simple HTML page redirect
+	<combobox name="cbscenes" design="glas" align="leftbottom" x="10" y="10" onloaded="add_scene_items();" /><action name="add_scene_items" scope="local" autorun="onstart">
+		for(set(i,0), i LT scene.count, inc(i),
+			caller.additem(calc('[img src=[dq]' + scene[get(i)].thumburl +  '[dq] style=[dq]border:1px solid rgba(255,255,255,0.5);width:48px;height:32px;vertical-align:middle;margin-right:8px;[dq]/] '+scene[get(i)].title), calc('openurl(' + scene[get(i)].sceneurl + ',_self)') );
+		);
+	</action>
+	-->
+</krpano>
