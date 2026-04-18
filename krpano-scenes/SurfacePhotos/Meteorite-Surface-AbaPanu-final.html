@@ -23,7 +23,7 @@
 	<script>
 		var lang = new URLSearchParams(window.location.search).get("lang") || "";
 		var opt_lang = lang && lang !== "en" ? "-" + lang : "";
-		embedpano({basepath: "https://cdn.solaranamnesis.com/SurfacePhotos/krpano/abapanu/", swf:"https://cdn.solaranamnesis.com/SurfacePhotos/krpano/abapanu/pano.swf", xml:"https://cdn.solaranamnesis.com/SurfacePhotos/krpano/abapanu/pano.xml", target:"pano", html5:"auto", mobilescale:1.0, vars:{opt_lang:opt_lang}});
+		embedpano({basepath: "https://cdn.solaranamnesis.com/SurfacePhotos/krpano/abapanu/", swf:"https://cdn.solaranamnesis.com/SurfacePhotos/krpano/abapanu/pano.swf", xml:"https://cdn.solaranamnesis.com/SurfacePhotos/krpano/abapanu/pano.xml", target:"pano", html5:"auto", mobilescale:1.0, initvars:{opt_lang:opt_lang}});
 	</script>
 </div>
 
