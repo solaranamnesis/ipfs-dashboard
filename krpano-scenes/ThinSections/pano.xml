@@ -1,0 +1,20 @@
+﻿<krpano bgcolor="0x000000">
+
+	<!-- the skin and the flat pano viewing and controlling setup -->
+	<include url="../skin/defaultskin.xml"/>
+	<include url="../skin/flatpano_setup.xml"/>
+	
+	<!-- add the combox plugin for the bottom left combo box -->
+	<include url="../plugins/combobox.xml"/>
+	<include url="../scenes.xml"/>
+	<include url="../custom-combobox.xml"/>
+	
+	<!-- preview pano image -->
+	<preview url="Meteorite-Thin-Section-Knyahinya-final.tiles/preview.jpg" />
+
+	<!-- pano image -->
+	<image hfov="1.00" vfov="0.449620" voffset="0.00">
+		<flat url="Meteorite-Thin-Section-Knyahinya-final.tiles/l%l/%00v/l%l_%00v_%00h.jpg" multires="512,768x346,1536x692,3072x1382,5888x2648,11840x5324,23680x10648,47360x21294,94720x42588" />
+	</image>
+
+</krpano>

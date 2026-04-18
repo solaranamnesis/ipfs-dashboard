@@ -1,0 +1,43 @@
+﻿<krpano bgcolor="0x000000">
+
+	<!-- the skin and the flat pano viewing and controlling setup -->
+	<include url="../skin/defaultskin.xml"/>
+	<include url="../skin/flatpano_setup.xml"/>
+	
+	<!-- add the combox plugin for the bottom left combo box -->
+	<include url="../plugins/combobox.xml"/>
+	<include url="../scenes.xml"/>
+	<include url="../custom-combobox.xml"/>
+	
+	<!-- preview pano image -->
+	<preview url="Meteorite-Surface-AbaPanu-final.tiles/preview.jpg" />
+
+	<!-- pano image -->
+	<image type="CYLINDER" hfov="1.00" vfov="0.612121" voffset="0.00" multires="true" tilesize="512">
+		<level tiledimagewidth="63232" tiledimageheight="38706">
+			<cylinder url="Meteorite-Surface-AbaPanu-final.tiles/l8/%00v/l8_%00v_%00h.jpg" />
+		</level>
+		<level tiledimagewidth="31744" tiledimageheight="19432">
+			<cylinder url="Meteorite-Surface-AbaPanu-final.tiles/l7/%00v/l7_%00v_%00h.jpg" />
+		</level>
+		<level tiledimagewidth="15872" tiledimageheight="9716">
+			<cylinder url="Meteorite-Surface-AbaPanu-final.tiles/l6/%00v/l6_%00v_%00h.jpg" />
+		</level>
+		<level tiledimagewidth="7936" tiledimageheight="4858">
+			<cylinder url="Meteorite-Surface-AbaPanu-final.tiles/l5/%00v/l5_%00v_%00h.jpg" />
+		</level>
+		<level tiledimagewidth="3840" tiledimageheight="2352">
+			<cylinder url="Meteorite-Surface-AbaPanu-final.tiles/l4/%00v/l4_%00v_%00h.jpg" />
+		</level>
+		<level tiledimagewidth="2048" tiledimageheight="1254">
+			<cylinder url="Meteorite-Surface-AbaPanu-final.tiles/l3/%00v/l3_%00v_%00h.jpg" />
+		</level>
+		<level tiledimagewidth="1024" tiledimageheight="628">
+			<cylinder url="Meteorite-Surface-AbaPanu-final.tiles/l2/%00v/l2_%00v_%00h.jpg" />
+		</level>
+		<level tiledimagewidth="512" tiledimageheight="314">
+			<cylinder url="Meteorite-Surface-AbaPanu-final.tiles/l1/%00v/l1_%00v_%00h.jpg" />
+		</level>
+	</image>
+
+</krpano>
