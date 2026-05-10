@@ -999,6 +999,29 @@ def build_translations(ns):
         'tt': f'Lingua Tatarica ({ns["tt"]})',
         'kk': f'Lingua Kazachica ({ns["kk"]})',
         'bg': 'Bulgarica',
+        'sr': f'Serbice ({ns["sr"]})',
+        'bs': 'Bosniace',
+        'hr': 'Croatice',
+        'eo': 'Esperanto',
+        'so': 'Somalice',
+        'ia': 'Interlingua',
+        'no': 'Norvegice',
+        'da': 'Danice',
+        'zu': 'Zuluice',
+        'ig': 'Igboice',
+        'ps': f'Pushtice ({ns["ps"]})',
+        'mg': 'Malgasice',
+        'my': 'Birmanice',
+        'ky': f'Kyrgisice ({ns["ky"]})',
+        'cs': 'Bohemice',
+        'ro': 'Daco-Romanice',
+        'ku': f'Kurdice ({ns["ku"]})',
+        'af': 'Africance',
+        'ca': 'Catalaunice',
+        'az': f'Azerbaijdanice ({ns["az"]})',
+        'qu': 'Quechuanice',
+        'ga': 'Hibernice',
+        'cy': 'Cambrice',
     }
 
     # Finnish (fi) - full translations of all language names in Finnish
@@ -1772,20 +1795,166 @@ def build_translations(ns):
         'gu': f'Gujarati ({ns["gu"]})',
     }
 
-    # Newari (new) - no reliable translations available for newly missing entries
-    t['new'] = {'uk': 'Українська', 'ml': 'Malayalam (മലയാളം)', 'bg': 'Bulgarian',
-        'lb': 'Lëtzebuergesch',
-        'hy': f'अर्मेनियाली ({ns["hy"]})',
+    # Newari (new) - language names in Nepal Bhasa (Devanagari/Nepali forms used as standard)
+    t['new'] = {
+        'en': 'अंग्रेजी',
+        'es': 'स्पेनिस',
+        'de': 'जर्मन',
+        'fr': 'फ्रेन्च',
+        'ja': f'जापानी ({ns["ja"]})',
+        'it': 'इटालियन',
         'ru': f'रुसी ({ns["ru"]})',
+        'sr': f'सर्बियाली ({ns["sr"]})',
+        'bs': 'बोस्नियाली',
+        'hr': 'क्रोएशियाली',
+        'uk': f'युक्रेनी ({ns["uk"]})',
+        'zh': f'चिनियाँ ({ns["zh"]})',
+        'he': f'हिब्रू ({ns["he"]})',
+        'th': f'थाई ({ns["th"]})',
+        'vi': f'भियतनामी ({ns["vi"]})',
+        'ar': f'अरबी ({ns["ar"]})',
+        'hi': f'हिन्दी ({ns["hi"]})',
+        'el': f'ग्रीक ({ns["el"]})',
+        'eo': 'एस्पेरान्तो',
+        'ko': f'कोरियाली ({ns["ko"]})',
+        'pt': 'पोर्तुगाली',
+        'bn': f'बंगाली ({ns["bn"]})',
+        'pa': f'पंजाबी ({ns["pa"]})',
+        'fa': f'फारसी ({ns["fa"]})',
+        'sw': 'स्वाहिली',
+        'so': 'सोमाली',
+        'id': 'इन्डोनेशियाली',
+        'ia': 'Interlingua',
+        'pl': 'पोलिश',
+        'nl': 'डच',
+        'sv': 'स्वीडिश',
+        'lb': 'Lëtzebuergesch',
+        'no': 'नर्वेजियन',
+        'da': 'डेनिश',
         'tr': f'टर्की ({ns["tr"]})',
+        'hu': 'हंगेरियन',
+        'new': f'नेपाल भाषा ({ns["new"]})',
+        'bo': f'लहासा तिब्बती ({ns["bo"]})',
+        'si': f'सिंहली ({ns["si"]})',
+        'or': f'ओड़िया ({ns["or"]})',
+        'ta': f'तमिल ({ns["ta"]})',
+        'hy': f'अर्मेनियाली ({ns["hy"]})',
+        'tl': 'तागालोग',
+        'ka': f'जर्जियाली ({ns["ka"]})',
+        'am': f'अमहारिक ({ns["am"]})',
+        'kn': f'कन्नड ({ns["kn"]})',
+        'yo': 'योरूबा',
+        'zu': 'ज़ूलू',
+        'ig': 'इग्बो',
         'gu': f'गुजराती ({ns["gu"]})',
+        'ha': 'हौसा',
+        'jv': 'जाभानिज',
+        'ur': f'उर्दू ({ns["ur"]})',
+        'ps': f'पश्तो ({ns["ps"]})',
+        'te': f'तेलुगु ({ns["te"]})',
+        'mr': f'मराठी ({ns["mr"]})',
+        'mg': 'मालागासी',
+        'my': f'बर्मी ({ns["my"]})',
+        'bg': f'बल्गेरियन ({ns["bg"]})',
+        'ml': f'मलयालम ({ns["ml"]})',
+        'la': 'लातिन',
+        'eu': 'बास्क',
+        'fi': 'फिनिश',
+        'mn': 'मंगोलियन (Latin)',
+        'tt': f'तातार ({ns["tt"]})',
+        'kk': f'कज़ाख ({ns["kk"]})',
+        'ky': f'किर्गिज ({ns["ky"]})',
+        'cs': 'चेक',
+        'ro': 'रोमानियाली',
+        'ku': f'कुर्दी ({ns["ku"]})',
+        'af': 'अफ्रीकांस',
+        'ca': 'कातालान',
+        'ht': 'Kreyòl',
+        'az': f'अजरबैजानी ({ns["az"]})',
+        'qu': 'Runa Simi (Quechua)',
+        'ga': 'Gaeilge',
+        'cy': 'Cymraeg',
     }
 
-    # Tibetan (bo) - no reliable translations available
-    t['bo'] = {'uk': 'Українська', 'ml': 'Malayalam (മലയാളം)', 'bg': 'Bulgarian',
+    # Tibetan (bo) - language names in Tibetan (Lhasa dialect)
+    t['bo'] = {
+        'en': 'དབྱིན་ཇི་སྐད',
+        'es': 'སི་པེན་སྐད',
+        'de': 'འཇར་མན་སྐད',
+        'fr': 'ཕྲན་སི་སྐད',
+        'ja': f'ཉི་ཧོང་སྐད ({ns["ja"]})',
+        'it': 'ཨི་ཊ་ལི་སྐད',
+        'ru': f'རུ་སི་སྐད ({ns["ru"]})',
+        'sr': f'སར་བི་ཡའི་སྐད ({ns["sr"]})',
+        'bs': 'བོས་ནི་ཡའི་སྐད',
+        'hr': 'ཀྲོ་ཨ་ཤི་ཡའི་སྐད',
+        'uk': f'ཡུ་ཀྲེན་སྐད ({ns["uk"]})',
+        'zh': f'རྒྱ་ནག་སྐད ({ns["zh"]})',
+        'he': f'ཧེབ་རུའི་སྐད ({ns["he"]})',
+        'th': f'ཐཱ་ཡི་སྐད ({ns["th"]})',
+        'vi': f'བི་འེཏ་ནམ་སྐད ({ns["vi"]})',
+        'ar': f'ཀ་རབ་སྐད ({ns["ar"]})',
+        'hi': f'ཧིན་དི་སྐད ({ns["hi"]})',
+        'el': f'གྲིག་སྐད ({ns["el"]})',
+        'eo': 'Esperanto',
+        'ko': f'ཀོ་རི་ཡའི་སྐད ({ns["ko"]})',
+        'pt': 'པོར་ཏུ་གལ་སྐད',
+        'bn': f'བེང་གལ་སྐད ({ns["bn"]})',
+        'pa': f'པཉ་ཇཱ་བི་སྐད ({ns["pa"]})',
+        'fa': f'ཕར་སི་སྐད ({ns["fa"]})',
+        'sw': 'སུ་ཝ་ཧི་ལི',
+        'so': 'སོ་མ་ལི',
+        'id': 'ཨིན་ཌོ་ནི་ཤི་ཡའི་སྐད',
+        'ia': 'Interlingua',
+        'pl': 'ཕོ་ལཱེན་སྐད',
+        'nl': 'ཧོ་ལཱེན་སྐད',
+        'sv': 'སུའི་ཌི་སྐད',
         'lb': 'Lëtzebuergesch',
+        'no': 'ནོར་ཝེ་སྐད',
+        'da': 'ཌེན་མར་སྐད',
+        'tr': f'ཐུར་ཀི་སྐད ({ns["tr"]})',
+        'hu': 'ཧཱང་གེ་རི་སྐད',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'བོད་སྐད ({ns["bo"]})',
+        'si': f'སིན་ཧ་ལ ({ns["si"]})',
+        'or': f'ཨོ་རི་ཡ་སྐད ({ns["or"]})',
+        'ta': f'ཐ་མིལ་སྐད ({ns["ta"]})',
         'hy': f'ཨར་མི་ནི་ཡ ({ns["hy"]})',
+        'tl': 'ཐཱ་གར་ལོག',
+        'ka': f'གེ་འོར་གི་ཡའི་སྐད ({ns["ka"]})',
+        'am': f'ཨམ་ཧ་རིག་སྐད ({ns["am"]})',
+        'kn': f'ཀཱ་ན་ཌ་སྐད ({ns["kn"]})',
+        'yo': 'ཡོ་རུ་བ',
+        'zu': 'ཟུ་ལུ',
+        'ig': 'ཨིག་བོ',
         'gu': f'གུ་ཇ་ར་ཐི ({ns["gu"]})',
+        'ha': 'ཧ་ཝུ་ས',
+        'jv': 'ཇཱ་བ་སྐད',
+        'ur': f'ཨུར་དུ ({ns["ur"]})',
+        'ps': f'པཤ་ཐོ ({ns["ps"]})',
+        'te': f'ཐེ་ལུ་གུ ({ns["te"]})',
+        'mr': f'མ་རཱ་ཐི ({ns["mr"]})',
+        'mg': 'མ་ལ་གཱ་སི',
+        'my': f'བར་མ་སྐད ({ns["my"]})',
+        'bg': f'བུལ་གེ་རི་ཡའི་སྐད ({ns["bg"]})',
+        'ml': f'མ་ལ་ཡཱ་ལམ ({ns["ml"]})',
+        'la': 'ལ་ཊིན་སྐད',
+        'eu': 'Euskara',
+        'fi': 'Suomi',
+        'mn': 'མོང་གོལ་སྐད (Latin)',
+        'tt': f'ཐ་ཐར་སྐད ({ns["tt"]})',
+        'kk': f'ཀ་ཛཱ་ཁ་སྐད ({ns["kk"]})',
+        'ky': f'ཀིར་གིས་སྐད ({ns["ky"]})',
+        'cs': 'ཆེག་སྐད',
+        'ro': 'རོ་མི་ནི་ཡའི་སྐད',
+        'ku': f'ཀུར་དིཤ་སྐད ({ns["ku"]})',
+        'af': 'ཨཕ་རི་ཀཱནས',
+        'ca': 'ཀ་ཐ་ལཱན',
+        'ht': 'Kreyòl',
+        'az': f'ཨ་ཛར་བའི་ཇཱན་སྐད ({ns["az"]})',
+        'qu': 'Runa Simi (Quechua)',
+        'ga': 'Gaeilge',
+        'cy': 'Cymraeg',
     }
 
     # Polish (pl)
@@ -2177,6 +2346,9 @@ def build_translations(ns):
         'tt': 'Татарча',
         'kk': f'Қазақша ({ns["kk"]})',
         'bg': 'Болгар',
+        'ia': 'Interlingua',
+        'no': 'Норвеги',
+        'zu': 'Зулу',
     }
 
     t['kk'] = {
@@ -2304,6 +2476,7 @@ def build_translations(ns):
         'lb': 'Lëtzebuergesch',
         'bo': f'Лхаса тибетче ({ns["bo"]})',
         'new': f'Nepal Bhasa ({ns["new"]})',
+        'tl': 'Тагалог',
     }
 
     # Czech (cs) - partial replacements for new entries
@@ -3320,6 +3493,11 @@ def build_translations(ns):
         'ca': 'Katalanina',
         'ht': 'Kreyòl',
         'az': f'Azerbaijianina ({ns["az"]})',
+        'eo': 'Esperanto',
+        'ia': 'Interlingua',
+        'qu': 'Runa Simi (Quechua)',
+        'ga': 'Gaeilge',
+        'cy': 'Cymraeg',
     }
 
     t['lb'] = {
@@ -3555,6 +3733,8 @@ def build_translations(ns):
     }
 
     source_footer_texts = get_source_footer_texts()
+
+    # Augment FULL_REPLACE_LOCALES with Babel for entries not yet manually set
     for locale in FULL_REPLACE_LOCALES:
         replacements = t.get(locale)
         if not replacements:
@@ -3564,6 +3744,32 @@ def build_translations(ns):
                 continue
             localized = get_babel_display_name(locale, lang)
             current = replacements.get(lang)
+            if current and not should_refresh_with_babel(current, lang, ns, source_footer_texts):
+                continue
+            if not localized:
+                continue
+            localized = capitalize_initial_letter(localized)
+            if should_append_native_name(lang, source_footer_texts) and ns.get(lang) and ns[lang] not in localized:
+                localized = f'{localized} ({ns[lang]})'
+            replacements[lang] = localized
+
+    # Also augment PARTIAL locales with Babel for any entries not manually specified,
+    # and refresh autonyms (like 'Kreyòl', 'Lëtzebuergesch', 'Euskara') with proper
+    # localized names when Babel has them.
+    partial_locales = [
+        'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
+        'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'hy',
+        'de', 'es', 'fr', 'hu', 'id', 'it', 'jv', 'new', 'bo', 'pl', 'pt',
+        'sv', 'sw', 'tr', 'tt', 'ky', 'cs',
+    ]
+    for locale in partial_locales:
+        replacements = t.setdefault(locale, {})
+        for lang in LANG_ORDER:
+            if lang == locale:
+                continue
+            localized = get_babel_display_name(locale, lang)
+            current = replacements.get(lang)
+            # Skip entries that are already manually specified with a non-autonym value
             if current and not should_refresh_with_babel(current, lang, ns, source_footer_texts):
                 continue
             if not localized:
