@@ -32,6 +32,13 @@ BABEL_OVERRIDES = {
     },
 }
 
+# Native script overrides: use these values instead of the self-link text extracted
+# from each language file, to ensure consistency with the English footer parentheticals.
+NATIVE_SCRIPT_OVERRIDES = {
+    'new': '𑐣𑐾𑐥𑐵𑐮 𑐨𑐵𑐲𑐵',  # Pracalit script, matches English footer
+    'ku': 'Kurmancî',           # Kurmanji dialect name, matches English footer
+}
+
 def get_href(lang):
     return 'index.html' if lang == 'en' else f'index-{lang}.html'
 
@@ -104,6 +111,8 @@ def extract_native_scripts():
                     paren_m = re.search(r'\((.+?)\)\s*$', text)
                     ns[lang] = paren_m.group(1) if paren_m else text
                     break
+    # Apply overrides to ensure consistency with the English footer parentheticals.
+    ns.update(NATIVE_SCRIPT_OVERRIDES)
     return ns
 
 
@@ -990,6 +999,29 @@ def build_translations(ns):
         'tt': f'Lingua Tatarica ({ns["tt"]})',
         'kk': f'Lingua Kazachica ({ns["kk"]})',
         'bg': 'Bulgarica',
+        'sr': f'Serbice ({ns["sr"]})',
+        'bs': 'Bosniace',
+        'hr': 'Croatice',
+        'eo': 'Esperanto',
+        'so': 'Somalice',
+        'ia': 'Interlingua',
+        'no': 'Norvegice',
+        'da': 'Danice',
+        'zu': 'Zuluice',
+        'ig': 'Igboice',
+        'ps': f'Pushtice ({ns["ps"]})',
+        'mg': 'Malgasice',
+        'my': 'Birmanice',
+        'ky': f'Kyrgisice ({ns["ky"]})',
+        'cs': 'Bohemice',
+        'ro': 'Daco-Romanice',
+        'ku': f'Kurdice ({ns["ku"]})',
+        'af': 'Africance',
+        'ca': 'Catalaunice',
+        'az': f'Azerbaijdanice ({ns["az"]})',
+        'qu': 'Quechuanice',
+        'ga': 'Hibernice',
+        'cy': 'Cambrice',
     }
 
     # Finnish (fi) - full translations of all language names in Finnish
@@ -1072,6 +1104,8 @@ def build_translations(ns):
         'uk': 'الأوكرانية (Українська)',
         'bg': 'البلغارية',
         'ht': 'Kreyòl',
+        'hy': f'الأرمنية ({ns["hy"]})',
+        'or': f'الأوديا ({ns["or"]})',
     }
 
     # Bengali (bn)
@@ -1094,6 +1128,7 @@ def build_translations(ns):
         'uk': 'ইউক্রেনীয় (Українська)',
         'bg': 'বুলগেরিয়ান',
         'ht': 'Kreyòl',
+        'or': f'ওড়িয়া ({ns["or"]})',
     }
 
     # Greek (el)
@@ -1218,6 +1253,7 @@ def build_translations(ns):
         'uk': 'اوکراینی (Українська)',
         'bg': 'بلغاری',
         'ht': 'Kreyòl',
+        'or': f'اودیا ({ns["or"]})',
     }
 
     # Hebrew (he)
@@ -1284,6 +1320,7 @@ def build_translations(ns):
         'uk': 'ウクライナ語 (Українська)',
         'bg': 'ブルガリア語',
         'ht': 'Kreyòl',
+        'hy': f'アルメニア語 ({ns["hy"]})',
     }
 
     # Korean (ko)
@@ -1306,6 +1343,7 @@ def build_translations(ns):
         'uk': '우크라이나어 (Українська)',
         'bg': '불가리아어',
         'ht': 'Kreyòl',
+        'hy': f'아르메니아어 ({ns["hy"]})',
     }
 
     # Dutch (nl) - also fix en and pl
@@ -1330,6 +1368,7 @@ def build_translations(ns):
         'uk': 'Oekraïens (Українська)',
         'bg': 'Bulgaars',
         'ht': 'Kreyòl',
+        'hy': f'Armeens ({ns["hy"]})',
     }
 
     # Odia (or)
@@ -1352,6 +1391,7 @@ def build_translations(ns):
         'uk': 'ୟୁକ୍ରେନୀ (Українська)',
         'bg': 'ବୁଲଗେରିୟ',
         'ht': 'Kreyòl',
+        'hy': f'ଆର୍ମେନୀୟ ({ns["hy"]})',
     }
 
     # Punjabi (pa)
@@ -1374,6 +1414,7 @@ def build_translations(ns):
         'uk': 'ਯੂਕਰੇਨੀ (Українська)',
         'bg': 'ਬੁਲਗਾਰੀਅਨ',
         'ht': 'Kreyòl',
+        'hy': f'ਅਰਮੇਨੀਅਨ ({ns["hy"]})',
     }
 
     # Russian (ru)
@@ -1396,6 +1437,7 @@ def build_translations(ns):
         'uk': 'Украинский (Українська)',
         'bg': 'Болгарский',
         'ht': 'Kreyòl',
+        'hy': f'Армянский ({ns["hy"]})',
     }
 
     # Sinhala (si)
@@ -1418,9 +1460,8 @@ def build_translations(ns):
         'uk': 'යුක්රේනියානු (Українська)',
         'bg': 'බල්ගේරියානු',
         'ht': 'Kreyòl',
+        'hy': f'ආර්මේනියානු ({ns["hy"]})',
     }
-
-    # Tamil (ta)
     t['ta'] = {
         'yo': 'யோரூபா',
         'gu': f'குஜராத்தி ({ns["gu"]})',
@@ -1440,9 +1481,9 @@ def build_translations(ns):
         'uk': 'உக்ரேனியன் (Українська)',
         'bg': 'பல்கேரியன்',
         'ht': 'Kreyòl',
+        'hy': f'அர்மேனிய ({ns["hy"]})',
+        'am': f'அம்ஹாரிக் ({ns["am"]})',
     }
-
-    # Thai (th)
     t['th'] = {
         'yo': 'ยอรูบา',
         'gu': f'คุชราต ({ns["gu"]})',
@@ -1462,6 +1503,7 @@ def build_translations(ns):
         'uk': 'ยูเครน (Українська)',
         'bg': 'บัลแกเรีย',
         'ht': 'Kreyòl',
+        'hy': f'ภาษาอาร์เมเนีย ({ns["hy"]})',
     }
 
     # Vietnamese (vi)
@@ -1484,9 +1526,8 @@ def build_translations(ns):
         'uk': 'Tiếng Ukraine (Українська)',
         'bg': 'Tiếng Bungari',
         'ht': 'Kreyòl',
+        'hy': f'Tiếng Armenia ({ns["hy"]})',
     }
-
-    # Chinese (zh)
     t['zh'] = {
         'yo': '约鲁巴语',
         'gu': f'古吉拉特语 ({ns["gu"]})',
@@ -1506,6 +1547,31 @@ def build_translations(ns):
         'uk': '乌克兰语 (Українська)',
         'bg': '保加利亚语',
         'ht': 'Kreyòl',
+        'sr': f'塞尔维亚语 ({ns["sr"]})',
+        'hy': f'亚美尼亚语 ({ns["hy"]})',
+        'kn': f'卡纳达语 ({ns["kn"]})',
+        'ky': f'吉尔吉斯语 ({ns["ky"]})',
+        'cs': '捷克语',
+        'ro': '罗马尼亚语',
+        'ku': f'库尔德语 ({ns["ku"]})',
+        'bs': '波斯尼亚语',
+        'hr': '克罗地亚语',
+        'ig': '伊博语',
+        'ca': '加泰罗尼亚语',
+        'so': '索马里语',
+        'zu': '祖鲁语',
+        'da': '丹麦语',
+        'no': '挪威语',
+        'af': '南非荷兰语',
+        'my': 'မြန်မာ',
+        'mg': '马达加斯加语',
+        'ga': '爱尔兰语',
+        'cy': '威尔士语',
+        'eo': '世界语',
+        'ia': '国际语',
+        'az': f'阿塞拜疆语 ({ns["az"]})',
+        'qu': '克丘亚语 (Runa Simi)',
+        'ps': f'普什图语 ({ns["ps"]})',
     }
 
     # Urdu (ur) - only te and mr
@@ -1523,9 +1589,9 @@ def build_translations(ns):
         'uk': 'یوکرینی (Українська)',
         'bg': 'بلغاری',
         'ht': 'Kreyòl',
+        'hy': f'آرمینی ({ns["hy"]})',
+        'or': f'اوڈیا ({ns["or"]})',
     }
-
-    # Pashto (ps) - full replacement
     t['ps'] = {
         'en': 'انګلیسي',
         'es': 'سپاینی',
@@ -1673,9 +1739,8 @@ def build_translations(ns):
         'uk': 'Ukrainien (Українська)',
         'bg': 'Bulgare',
         'ht': 'Kreyòl',
+        'gu': f'Gujarati ({ns["gu"]})',
     }
-
-    # Hungarian (hu)
     t['hu'] = {
         'yo': 'Joruba',
         'gu': f'Gudzsaráti ({ns["gu"]})',
@@ -1693,6 +1758,7 @@ def build_translations(ns):
         'uk': 'Ukrán (Українська)',
         'bg': 'Bolgár',
         'ht': 'Kreyòl',
+        'hy': f'Örmény ({ns["hy"]})',
     }
 
     # Italian (it)
@@ -1710,6 +1776,7 @@ def build_translations(ns):
         'uk': 'Ucraino (Українська)',
         'bg': 'Bulgaro',
         'ht': 'Kreyòl',
+        'gu': f'Gujarati ({ns["gu"]})',
     }
 
     # Javanese (jv) - minimal changes needed
@@ -1724,16 +1791,170 @@ def build_translations(ns):
         'uk': 'Ukrania (Українська)',
         'bg': 'Bulgari',
         'ht': 'Kreyòl',
+        'hy': f'Armenia ({ns["hy"]})',
+        'gu': f'Gujarati ({ns["gu"]})',
     }
 
-    # Newari (new) - no reliable translations available for newly missing entries
-    t['new'] = {'uk': 'Українська', 'ml': 'Malayalam (മലയാളം)', 'bg': 'Bulgarian',
+    # Newari (new) - language names in Nepal Bhasa (Devanagari/Nepali forms used as standard)
+    t['new'] = {
+        'en': 'अंग्रेजी',
+        'es': 'स्पेनिस',
+        'de': 'जर्मन',
+        'fr': 'फ्रेन्च',
+        'ja': f'जापानी ({ns["ja"]})',
+        'it': 'इटालियन',
+        'ru': f'रुसी ({ns["ru"]})',
+        'sr': f'सर्बियाली ({ns["sr"]})',
+        'bs': 'बोस्नियाली',
+        'hr': 'क्रोएशियाली',
+        'uk': f'युक्रेनी ({ns["uk"]})',
+        'zh': f'चिनियाँ ({ns["zh"]})',
+        'he': f'हिब्रू ({ns["he"]})',
+        'th': f'थाई ({ns["th"]})',
+        'vi': f'भियतनामी ({ns["vi"]})',
+        'ar': f'अरबी ({ns["ar"]})',
+        'hi': f'हिन्दी ({ns["hi"]})',
+        'el': f'ग्रीक ({ns["el"]})',
+        'eo': 'एस्पेरान्तो',
+        'ko': f'कोरियाली ({ns["ko"]})',
+        'pt': 'पोर्तुगाली',
+        'bn': f'बंगाली ({ns["bn"]})',
+        'pa': f'पंजाबी ({ns["pa"]})',
+        'fa': f'फारसी ({ns["fa"]})',
+        'sw': 'स्वाहिली',
+        'so': 'सोमाली',
+        'id': 'इन्डोनेशियाली',
+        'ia': 'Interlingua',
+        'pl': 'पोलिश',
+        'nl': 'डच',
+        'sv': 'स्वीडिश',
         'lb': 'Lëtzebuergesch',
+        'no': 'नर्वेजियन',
+        'da': 'डेनिश',
+        'tr': f'टर्की ({ns["tr"]})',
+        'hu': 'हंगेरियन',
+        'new': f'नेपाल भाषा ({ns["new"]})',
+        'bo': f'लहासा तिब्बती ({ns["bo"]})',
+        'si': f'सिंहली ({ns["si"]})',
+        'or': f'ओड़िया ({ns["or"]})',
+        'ta': f'तमिल ({ns["ta"]})',
+        'hy': f'अर्मेनियाली ({ns["hy"]})',
+        'tl': 'तागालोग',
+        'ka': f'जर्जियाली ({ns["ka"]})',
+        'am': f'अमहारिक ({ns["am"]})',
+        'kn': f'कन्नड ({ns["kn"]})',
+        'yo': 'योरूबा',
+        'zu': 'ज़ूलू',
+        'ig': 'इग्बो',
+        'gu': f'गुजराती ({ns["gu"]})',
+        'ha': 'हौसा',
+        'jv': 'जाभानिज',
+        'ur': f'उर्दू ({ns["ur"]})',
+        'ps': f'पश्तो ({ns["ps"]})',
+        'te': f'तेलुगु ({ns["te"]})',
+        'mr': f'मराठी ({ns["mr"]})',
+        'mg': 'मालागासी',
+        'my': f'बर्मी ({ns["my"]})',
+        'bg': f'बल्गेरियन ({ns["bg"]})',
+        'ml': f'मलयालम ({ns["ml"]})',
+        'la': 'लातिन',
+        'eu': 'बास्क',
+        'fi': 'फिनिश',
+        'mn': 'मंगोलियन (Latin)',
+        'tt': f'तातार ({ns["tt"]})',
+        'kk': f'कज़ाख ({ns["kk"]})',
+        'ky': f'किर्गिज ({ns["ky"]})',
+        'cs': 'चेक',
+        'ro': 'रोमानियाली',
+        'ku': f'कुर्दी ({ns["ku"]})',
+        'af': 'अफ्रीकांस',
+        'ca': 'कातालान',
+        'ht': 'Kreyòl',
+        'az': f'अजरबैजानी ({ns["az"]})',
+        'qu': 'Runa Simi (Quechua)',
+        'ga': 'Gaeilge',
+        'cy': 'Cymraeg',
     }
 
-    # Tibetan (bo) - no reliable translations available
-    t['bo'] = {'uk': 'Українська', 'ml': 'Malayalam (മലയാളം)', 'bg': 'Bulgarian',
+    # Tibetan (bo) - language names in Tibetan (Lhasa dialect)
+    t['bo'] = {
+        'en': 'དབྱིན་ཇི་སྐད',
+        'es': 'སི་པེན་སྐད',
+        'de': 'འཇར་མན་སྐད',
+        'fr': 'ཕྲན་སི་སྐད',
+        'ja': f'ཉི་ཧོང་སྐད ({ns["ja"]})',
+        'it': 'ཨི་ཊ་ལི་སྐད',
+        'ru': f'རུ་སི་སྐད ({ns["ru"]})',
+        'sr': f'སར་བི་ཡའི་སྐད ({ns["sr"]})',
+        'bs': 'བོས་ནི་ཡའི་སྐད',
+        'hr': 'ཀྲོ་ཨ་ཤི་ཡའི་སྐད',
+        'uk': f'ཡུ་ཀྲེན་སྐད ({ns["uk"]})',
+        'zh': f'རྒྱ་ནག་སྐད ({ns["zh"]})',
+        'he': f'ཧེབ་རུའི་སྐད ({ns["he"]})',
+        'th': f'ཐཱ་ཡི་སྐད ({ns["th"]})',
+        'vi': f'བི་འེཏ་ནམ་སྐད ({ns["vi"]})',
+        'ar': f'ཀ་རབ་སྐད ({ns["ar"]})',
+        'hi': f'ཧིན་དི་སྐད ({ns["hi"]})',
+        'el': f'གྲིག་སྐད ({ns["el"]})',
+        'eo': 'Esperanto',
+        'ko': f'ཀོ་རི་ཡའི་སྐད ({ns["ko"]})',
+        'pt': 'པོར་ཏུ་གལ་སྐད',
+        'bn': f'བེང་གལ་སྐད ({ns["bn"]})',
+        'pa': f'པཉ་ཇཱ་བི་སྐད ({ns["pa"]})',
+        'fa': f'ཕར་སི་སྐད ({ns["fa"]})',
+        'sw': 'སུ་ཝ་ཧི་ལི',
+        'so': 'སོ་མ་ལི',
+        'id': 'ཨིན་ཌོ་ནི་ཤི་ཡའི་སྐད',
+        'ia': 'Interlingua',
+        'pl': 'ཕོ་ལཱེན་སྐད',
+        'nl': 'ཧོ་ལཱེན་སྐད',
+        'sv': 'སུའི་ཌི་སྐད',
         'lb': 'Lëtzebuergesch',
+        'no': 'ནོར་ཝེ་སྐད',
+        'da': 'ཌེན་མར་སྐད',
+        'tr': f'ཐུར་ཀི་སྐད ({ns["tr"]})',
+        'hu': 'ཧཱང་གེ་རི་སྐད',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'bo': f'བོད་སྐད ({ns["bo"]})',
+        'si': f'སིན་ཧ་ལ ({ns["si"]})',
+        'or': f'ཨོ་རི་ཡ་སྐད ({ns["or"]})',
+        'ta': f'ཐ་མིལ་སྐད ({ns["ta"]})',
+        'hy': f'ཨར་མི་ནི་ཡ ({ns["hy"]})',
+        'tl': 'ཐཱ་གར་ལོག',
+        'ka': f'གེ་འོར་གི་ཡའི་སྐད ({ns["ka"]})',
+        'am': f'ཨམ་ཧ་རིག་སྐད ({ns["am"]})',
+        'kn': f'ཀཱ་ན་ཌ་སྐད ({ns["kn"]})',
+        'yo': 'ཡོ་རུ་བ',
+        'zu': 'ཟུ་ལུ',
+        'ig': 'ཨིག་བོ',
+        'gu': f'གུ་ཇ་ར་ཐི ({ns["gu"]})',
+        'ha': 'ཧ་ཝུ་ས',
+        'jv': 'ཇཱ་བ་སྐད',
+        'ur': f'ཨུར་དུ ({ns["ur"]})',
+        'ps': f'པཤ་ཐོ ({ns["ps"]})',
+        'te': f'ཐེ་ལུ་གུ ({ns["te"]})',
+        'mr': f'མ་རཱ་ཐི ({ns["mr"]})',
+        'mg': 'མ་ལ་གཱ་སི',
+        'my': f'བར་མ་སྐད ({ns["my"]})',
+        'bg': f'བུལ་གེ་རི་ཡའི་སྐད ({ns["bg"]})',
+        'ml': f'མ་ལ་ཡཱ་ལམ ({ns["ml"]})',
+        'la': 'ལ་ཊིན་སྐད',
+        'eu': 'Euskara',
+        'fi': 'Suomi',
+        'mn': 'མོང་གོལ་སྐད (Latin)',
+        'tt': f'ཐ་ཐར་སྐད ({ns["tt"]})',
+        'kk': f'ཀ་ཛཱ་ཁ་སྐད ({ns["kk"]})',
+        'ky': f'ཀིར་གིས་སྐད ({ns["ky"]})',
+        'cs': 'ཆེག་སྐད',
+        'ro': 'རོ་མི་ནི་ཡའི་སྐད',
+        'ku': f'ཀུར་དིཤ་སྐད ({ns["ku"]})',
+        'af': 'ཨཕ་རི་ཀཱནས',
+        'ca': 'ཀ་ཐ་ལཱན',
+        'ht': 'Kreyòl',
+        'az': f'ཨ་ཛར་བའི་ཇཱན་སྐད ({ns["az"]})',
+        'qu': 'Runa Simi (Quechua)',
+        'ga': 'Gaeilge',
+        'cy': 'Cymraeg',
     }
 
     # Polish (pl)
@@ -1753,9 +1974,8 @@ def build_translations(ns):
         'uk': 'Українська',
         'bg': 'Bułgarski',
         'ht': 'Kreyòl',
+        'hy': f'Ormiański ({ns["hy"]})',
     }
-
-    # Portuguese (pt)
     t['pt'] = {
         'da': 'Dinamarquês',
         'ml': 'Malayalam (മലയാളം)',
@@ -1770,6 +1990,8 @@ def build_translations(ns):
         'uk': 'Ucraniano (Українська)',
         'bg': 'Búlgaro',
         'ht': 'Kreyòl',
+        'hy': f'Armênio ({ns["hy"]})',
+        'gu': f'Gujarati ({ns["gu"]})',
     }
 
     # Swedish (sv)
@@ -1787,6 +2009,8 @@ def build_translations(ns):
         'uk': 'Ukrainska (Українська)',
         'bg': 'Bulgariska',
         'ht': 'Kreyòl',
+        'hy': f'Armeniska ({ns["hy"]})',
+        'gu': f'Gujarati ({ns["gu"]})',
     }
 
     # Danish (da)
@@ -1955,6 +2179,7 @@ def build_translations(ns):
         'uk': 'Kiukrani (Українська)',
         'bg': 'Kibulgaria',
         'ht': 'Kreyòl',
+        'hy': f'Kiarmenia ({ns["hy"]})',
     }
 
     # Turkish (tr)
@@ -1974,6 +2199,7 @@ def build_translations(ns):
         'uk': 'Ukraynaca (Українська)',
         'bg': 'Bulgarca',
         'ht': 'Kreyòl',
+        'hy': f'Ermenice ({ns["hy"]})',
     }
 
     # Indonesian (id) - existing entries are acceptable Indonesian forms
@@ -1988,6 +2214,8 @@ def build_translations(ns):
         'uk': 'Ukraina (Українська)',
         'bg': 'Bulgaria',
         'ht': 'Kreyòl',
+        'hy': f'Armenia ({ns["hy"]})',
+        'gu': f'Gujarati ({ns["gu"]})',
     }
 
     # Basque (eu)
@@ -2001,6 +2229,7 @@ def build_translations(ns):
         'uk': 'Ukrainera (Українська)',
         'bg': 'Bulgariera',
         'ht': 'Kreyòl',
+        'new': f'Nepal Bhasa ({ns["new"]})',
     }
 
     # Mongolian Latin (mn) - full translations of all language names in Mongolian Latin
@@ -2117,6 +2346,9 @@ def build_translations(ns):
         'tt': 'Татарча',
         'kk': f'Қазақша ({ns["kk"]})',
         'bg': 'Болгар',
+        'ia': 'Interlingua',
+        'no': 'Норвеги',
+        'zu': 'Зулу',
     }
 
     t['kk'] = {
@@ -2242,6 +2474,9 @@ def build_translations(ns):
         'bg': 'Болгарча',
         'ht': 'Kreyòl',
         'lb': 'Lëtzebuergesch',
+        'bo': f'Лхаса тибетче ({ns["bo"]})',
+        'new': f'Nepal Bhasa ({ns["new"]})',
+        'tl': 'Тагалог',
     }
 
     # Czech (cs) - partial replacements for new entries
@@ -3258,6 +3493,11 @@ def build_translations(ns):
         'ca': 'Katalanina',
         'ht': 'Kreyòl',
         'az': f'Azerbaijianina ({ns["az"]})',
+        'eo': 'Esperanto',
+        'ia': 'Interlingua',
+        'qu': 'Runa Simi (Quechua)',
+        'ga': 'Gaeilge',
+        'cy': 'Cymraeg',
     }
 
     t['lb'] = {
@@ -3493,6 +3733,8 @@ def build_translations(ns):
     }
 
     source_footer_texts = get_source_footer_texts()
+
+    # Augment FULL_REPLACE_LOCALES with Babel for entries not yet manually set
     for locale in FULL_REPLACE_LOCALES:
         replacements = t.get(locale)
         if not replacements:
@@ -3502,6 +3744,32 @@ def build_translations(ns):
                 continue
             localized = get_babel_display_name(locale, lang)
             current = replacements.get(lang)
+            if current and not should_refresh_with_babel(current, lang, ns, source_footer_texts):
+                continue
+            if not localized:
+                continue
+            localized = capitalize_initial_letter(localized)
+            if should_append_native_name(lang, source_footer_texts) and ns.get(lang) and ns[lang] not in localized:
+                localized = f'{localized} ({ns[lang]})'
+            replacements[lang] = localized
+
+    # Also augment PARTIAL locales with Babel for any entries not manually specified,
+    # and refresh autonyms (like 'Kreyòl', 'Lëtzebuergesch', 'Euskara') with proper
+    # localized names when Babel has them.
+    partial_locales = [
+        'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
+        'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'hy',
+        'de', 'es', 'fr', 'hu', 'id', 'it', 'jv', 'new', 'bo', 'pl', 'pt',
+        'sv', 'sw', 'tr', 'tt', 'ky', 'cs',
+    ]
+    for locale in partial_locales:
+        replacements = t.setdefault(locale, {})
+        for lang in LANG_ORDER:
+            if lang == locale:
+                continue
+            localized = get_babel_display_name(locale, lang)
+            current = replacements.get(lang)
+            # Skip entries that are already manually specified with a non-autonym value
             if current and not should_refresh_with_babel(current, lang, ns, source_footer_texts):
                 continue
             if not localized:
@@ -3672,6 +3940,15 @@ def process_file(locale, replacements, translations_for_full=None):
 
     if locale == 'kn':
         content = fix_kn_footer(content, translations_for_full)
+        # Also apply update_footer_line for already-normalized (single-line) footers
+        lines = content.split('\n')
+        new_lines = []
+        for line in lines:
+            if ('&nbsp;|&nbsp;' in line and '<a href=#>' in line and
+                    line.count('href=') >= 10):
+                line = update_footer_line(line, locale, translations_for_full)
+            new_lines.append(line)
+        content = '\n'.join(new_lines)
     else:
         lines = content.split('\n')
         new_lines = []
