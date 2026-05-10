@@ -63,6 +63,18 @@ def should_append_native_name(lang, source_footer_texts):
     return '(' in source_footer_texts.get(lang, '') and ')' in source_footer_texts.get(lang, '')
 
 
+def capitalize_initial_letter(text):
+    """Uppercase the first cased character when the script supports casing."""
+    for i, ch in enumerate(text):
+        upper = ch.upper()
+        lower = ch.lower()
+        if upper != lower:
+            if ch != upper:
+                return text[:i] + upper + text[i + 1:]
+            break
+    return text
+
+
 def should_refresh_with_babel(current, lang, ns, source_footer_texts):
     """Replace autonyms/placeholders in fully translated footers with localized names."""
     source_label = source_footer_texts.get(lang, '').strip()
@@ -3492,6 +3504,7 @@ def build_translations(ns):
                 continue
             if not localized:
                 continue
+            localized = capitalize_initial_letter(localized)
             if should_append_native_name(lang, source_footer_texts) and ns.get(lang) and ns[lang] not in localized:
                 localized = f'{localized} ({ns[lang]})'
             replacements[lang] = localized
