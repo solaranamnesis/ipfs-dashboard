@@ -3,6 +3,14 @@
 
 import re
 import os
+from functools import lru_cache
+
+try:
+    from babel import Locale
+    from babel.core import UnknownLocaleError
+except ImportError:  # pragma: no cover - optional fallback dependency
+    Locale = None
+    UnknownLocaleError = Exception
 
 WORKDIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -13,8 +21,54 @@ LANG_ORDER = [
     'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy',
 ]
 
+FULL_REPLACE_LOCALES = ['af', 'am', 'bg', 'bs', 'ca', 'cy', 'da', 'eo', 'fi', 'ga', 'gu', 'ha', 'hr', 'ht', 'ia', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'lb', 'ml', 'mn', 'mr', 'mg', 'my', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
+
+BABEL_OVERRIDES = {
+    'my': {
+        'af': 'အာဖရိကန်စ်',
+        'ht': 'ဟေတီယန် ခရီးယိုးလ်',
+        'qu': 'ခက်ချ်ဝါ',
+        'sr': 'ဆားဘီးယား',
+    },
+}
+
 def get_href(lang):
     return 'index.html' if lang == 'en' else f'index-{lang}.html'
+
+
+@lru_cache(maxsize=None)
+def get_babel_locale(locale):
+    """Return a Babel locale object when available."""
+    if Locale is None:
+        return None
+    try:
+        return Locale.parse(locale)
+    except (UnknownLocaleError, ValueError):
+        return None
+
+
+def get_babel_display_name(locale, lang):
+    """Return a localized language name from Babel or overrides."""
+    override = BABEL_OVERRIDES.get(locale, {}).get(lang)
+    if override:
+        return override
+    babel_locale = get_babel_locale(locale)
+    if not babel_locale:
+        return None
+    return babel_locale.languages.get(lang)
+
+
+def should_append_native_name(lang, source_footer_texts):
+    """Mirror index.html formatting for languages shown with native names."""
+    return '(' in source_footer_texts.get(lang, '') and ')' in source_footer_texts.get(lang, '')
+
+
+def should_refresh_with_babel(current, lang, ns, source_footer_texts):
+    """Replace autonyms/placeholders in fully translated footers with localized names."""
+    source_label = source_footer_texts.get(lang, '').strip()
+    native_name = ns.get(lang, '').strip()
+    current = current.strip()
+    return current in {source_label, native_name, f'({native_name})'} or current.strip('() ') == native_name
 
 
 def extract_native_scripts():
@@ -182,7 +236,7 @@ def build_translations(ns):
         'hr': 'Hrvatski',
         'ps': f'({ns["ps"]})',
         'ig': 'Igbo',
-        'sr': 'Srpski',
+        'sr': 'ဆားဘီးယား',
     }
 
     t['ml'] = {
@@ -3424,6 +3478,24 @@ def build_translations(ns):
         'cy': 'Cymraeg',
     }
 
+    source_footer_texts = get_source_footer_texts()
+    for locale in FULL_REPLACE_LOCALES:
+        replacements = t.get(locale)
+        if not replacements:
+            continue
+        for lang in LANG_ORDER:
+            if lang == locale:
+                continue
+            localized = get_babel_display_name(locale, lang)
+            current = replacements.get(lang)
+            if current and not should_refresh_with_babel(current, lang, ns, source_footer_texts):
+                continue
+            if not localized:
+                continue
+            if should_append_native_name(lang, source_footer_texts) and ns.get(lang) and ns[lang] not in localized:
+                localized = f'{localized} ({ns[lang]})'
+            replacements[lang] = localized
+
     return t
 
 
@@ -3631,8 +3703,6 @@ def main():
     print('Building translation table...')
     translations = build_translations(ns)
 
-    # Locales whose footers are fully translated into the target language
-    full_replace_locales = ['af', 'am', 'bg', 'bs', 'ca', 'cy', 'da', 'eo', 'fi', 'ga', 'gu', 'ha', 'hr', 'ht', 'ia', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'lb', 'ml', 'mn', 'mr', 'mg', 'my', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
     # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
@@ -3645,7 +3715,7 @@ def main():
     ensure_only_locales = ['en']
 
     print('\nProcessing full-replacement files...')
-    for locale in full_replace_locales:
+    for locale in FULL_REPLACE_LOCALES:
         print(f'  {locale}:')
         if locale in translations:
             process_file(locale, translations[locale], translations[locale])
