@@ -1932,6 +1932,7 @@ def build_translations(ns):
         'af': 'Afrikaans',
         'ca': 'Katalansk',
         'ht': 'Kreyòl',
+        'mg': 'Madagaskisk',
     }
 
     # Swahili (sw) - Ki- prefix pattern
@@ -2878,6 +2879,7 @@ def build_translations(ns):
         'ca': 'Català',
         'bg': 'Bolqar',
         'ht': 'Kreyòl',
+        'mg': 'Malaqasi',
         'az': 'Azərbaycan dili',
     }
 
