@@ -21,7 +21,7 @@ LANG_ORDER = [
     'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy',
 ]
 
-FULL_REPLACE_LOCALES = ['af', 'am', 'bg', 'bs', 'ca', 'cy', 'da', 'eo', 'fi', 'ga', 'gu', 'ha', 'hr', 'ht', 'ia', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'lb', 'ml', 'mn', 'mr', 'mg', 'my', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
+FULL_REPLACE_LOCALES = ['af', 'am', 'az', 'bg', 'bs', 'ca', 'cy', 'da', 'eo', 'fi', 'ga', 'gu', 'ha', 'hr', 'ht', 'ia', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'lb', 'ml', 'mn', 'mr', 'mg', 'my', 'no', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
 
 BABEL_OVERRIDES = {
     'my': {
@@ -1932,6 +1932,7 @@ def build_translations(ns):
         'af': 'Afrikaans',
         'ca': 'Katalansk',
         'ht': 'Kreyòl',
+        'mg': 'Madagaskisk',
     }
 
     # Swahili (sw) - Ki- prefix pattern
@@ -2878,6 +2879,7 @@ def build_translations(ns):
         'ca': 'Català',
         'bg': 'Bolqar',
         'ht': 'Kreyòl',
+        'mg': 'Malaqasi',
         'az': 'Azərbaycan dili',
     }
 
