@@ -15,7 +15,7 @@ except ImportError:  # pragma: no cover - optional fallback dependency
 WORKDIR = os.path.dirname(os.path.abspath(__file__))
 
 LANG_ORDER = [
-    'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'yue', 'he', 'th', 'vi', 'ar',
+    'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'wuu', 'yue', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'eo', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'ia', 'pl', 'nl', 'sv', 'lb', 'no', 'da',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
     'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'ms', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy',
@@ -38,6 +38,7 @@ NATIVE_SCRIPT_OVERRIDES = {
     'new': '𑐣𑐾𑐥𑐵𑐮 𑐨𑐵𑐲𑐵',  # Pracalit script, matches English footer
     'ku': 'Kurmancî',           # Kurmanji dialect name, matches English footer
     'yue': '粵語',               # Cantonese native name
+    'wuu': '吴语',               # Wu Chinese native name
 }
 
 def get_href(lang):
