@@ -18,7 +18,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'wuu', 'yue', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'eo', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'ia', 'pl', 'nl', 'sv', 'lb', 'no', 'da',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'ms', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy', 'nan', 'uz', 'ne',
+    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'sd', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'ms', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy', 'nan', 'uz', 'ne',
 ]
 
 FULL_REPLACE_LOCALES = ['af', 'am', 'az', 'bg', 'bs', 'ca', 'cy', 'da', 'eo', 'fi', 'ga', 'gu', 'ha', 'hr', 'ht', 'ia', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'lb', 'ml', 'mn', 'mr', 'mg', 'ms', 'my', 'ne', 'no', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'uz', 'yo', 'zu']
@@ -3945,7 +3945,7 @@ def build_translations(ns):
     # localized names when Babel has them.
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
-        'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'hy',
+        'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'sd', 'hy',
         'de', 'es', 'fr', 'hu', 'id', 'it', 'jv', 'new', 'bo', 'pl', 'pt',
         'sv', 'sw', 'tr', 'tt', 'ky', 'cs', 'yue', 'nan', 'wuu',
     ]
@@ -4198,7 +4198,7 @@ def main():
     # Locales with partial replacements (only specific entries need updating)
     partial_locales = [
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
-        'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'hy',
+        'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'sd', 'hy',
         'de', 'es', 'fr', 'hu', 'id', 'it', 'jv', 'new', 'bo', 'pl', 'pt',
         'sv', 'sw', 'tr', 'tt', 'ky', 'cs', 'yue', 'nan', 'wuu',
     ]
