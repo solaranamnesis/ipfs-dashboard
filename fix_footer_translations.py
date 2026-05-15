@@ -4204,7 +4204,7 @@ def main():
     ]
     # Locales already fully translated whose footers only need link-insertion if new
     # languages are added (en is the source of truth).
-    ensure_only_locales = ['en', 'rn', 'rw']
+    ensure_only_locales = ['en']
 
     print('\nProcessing full-replacement files...')
     for locale in FULL_REPLACE_LOCALES:
