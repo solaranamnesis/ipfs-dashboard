@@ -18,7 +18,7 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'wuu', 'yue', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'eo', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'ia', 'pl', 'nl', 'sv', 'lb', 'no', 'da',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'sd', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'ms', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy', 'nan', 'uz', 'ne',
+    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'sd', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'ms', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy', 'nan', 'uz', 'rn', 'ne',
 ]
 
 FULL_REPLACE_LOCALES = ['af', 'am', 'az', 'bg', 'bs', 'ca', 'cy', 'da', 'eo', 'fi', 'ga', 'gu', 'ha', 'hr', 'ht', 'ia', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'lb', 'ml', 'mn', 'mr', 'mg', 'ms', 'my', 'ne', 'no', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'uz', 'yo', 'zu']
