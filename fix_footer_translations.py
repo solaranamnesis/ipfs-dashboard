@@ -18,10 +18,10 @@ LANG_ORDER = [
     'en', 'es', 'de', 'fr', 'ja', 'it', 'ru', 'sr', 'bs', 'hr', 'uk', 'zh', 'wuu', 'yue', 'he', 'th', 'vi', 'ar',
     'hi', 'el', 'eo', 'ko', 'pt', 'bn', 'pa', 'fa', 'sw', 'so', 'id', 'ia', 'pl', 'nl', 'sv', 'lb', 'no', 'da',
     'tr', 'hu', 'new', 'bo', 'si', 'or', 'ta', 'hy', 'tl', 'ka', 'am', 'kn',
-    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'ms', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy', 'ne',
+    'yo', 'zu', 'ig', 'gu', 'ha', 'jv', 'ur', 'ps', 'te', 'mr', 'mg', 'my', 'bg', 'ml', 'ms', 'la', 'eu', 'fi', 'mn', 'tt', 'kk', 'ky', 'cs', 'ro', 'ku', 'af', 'ca', 'ht', 'az', 'qu', 'ga', 'cy', 'nan', 'uz', 'ne',
 ]
 
-FULL_REPLACE_LOCALES = ['af', 'am', 'az', 'bg', 'bs', 'ca', 'cy', 'da', 'eo', 'fi', 'ga', 'gu', 'ha', 'hr', 'ht', 'ia', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'lb', 'ml', 'mn', 'mr', 'mg', 'ms', 'my', 'ne', 'no', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'yo', 'zu']
+FULL_REPLACE_LOCALES = ['af', 'am', 'az', 'bg', 'bs', 'ca', 'cy', 'da', 'eo', 'fi', 'ga', 'gu', 'ha', 'hr', 'ht', 'ia', 'ig', 'ka', 'kk', 'kn', 'ku', 'la', 'lb', 'ml', 'mn', 'mr', 'mg', 'ms', 'my', 'ne', 'no', 'ps', 'qu', 'ro', 'so', 'sr', 'te', 'tl', 'uk', 'uz', 'yo', 'zu']
 
 BABEL_OVERRIDES = {
     'my': {
@@ -89,6 +89,9 @@ def should_refresh_with_babel(current, lang, ns, source_footer_texts):
     source_label = source_footer_texts.get(lang, '').strip()
     native_name = ns.get(lang, '').strip()
     current = current.strip()
+    # Also refresh when the value is just the raw lang code (a fallback placeholder)
+    if current == lang:
+        return True
     return current in {source_label, native_name, f'({native_name})'} or current.strip('() ') == native_name
 
 
@@ -1105,6 +1108,8 @@ def build_translations(ns):
         'qu': 'Quechuanice',
         'ga': 'Hibernice',
         'cy': 'Cambrice',
+        'nan': '閩南語',
+        'uz': f'Uzbekice ({ns["uz"]})',
     }
 
     # Finnish (fi) - full translations of all language names in Finnish
@@ -1957,6 +1962,8 @@ def build_translations(ns):
         'qu': 'Runa Simi (Quechua)',
         'ga': 'Gaeilge',
         'cy': 'Cymraeg',
+        'nan': '閩南語',
+        'uz': f'उज्बेक ({ns["uz"]})',
     }
 
     # Tibetan (bo) - language names in Tibetan (Lhasa dialect)
@@ -2038,6 +2045,8 @@ def build_translations(ns):
         'qu': 'Runa Simi (Quechua)',
         'ga': 'Gaeilge',
         'cy': 'Cymraeg',
+        'nan': '閩南語',
+        'uz': f'ཨུཛ་བེག་སྐད ({ns["uz"]})',
     }
 
     # Polish (pl)
@@ -3123,6 +3132,8 @@ def build_translations(ns):
         'bg': 'Bilgè',
         'my': 'Bimans',
         'ht': 'Kreyòl',
+        'nan': '閩南語',
+        'uz': f'Ouzb\u00e8k ({ns["uz"]})',
     }
 
     # Azerbaijani (az)
@@ -3581,6 +3592,8 @@ def build_translations(ns):
         'qu': 'Runa Simi (Quechua)',
         'ga': 'Gaeilge',
         'cy': 'Cymraeg',
+        'nan': '閩南語',
+        'uz': f'Uzbekiana ({ns["uz"]})',
     }
 
     t['lb'] = {
@@ -3897,6 +3910,13 @@ def build_translations(ns):
         'ga': 'आयरिश',
         'cy': 'वेल्स',
         'nan': '閩南語',
+        'uz': f'उज्बेक ({ns["uz"]})',
+    }
+
+    t['uz'] = {
+        'wuu': f'Wu Chinese ({ns["wuu"]})',
+        'tl': 'Tagalog',
+        'nan': '閩南語',
     }
 
     source_footer_texts = get_source_footer_texts()
@@ -3927,8 +3947,20 @@ def build_translations(ns):
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
         'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'hy',
         'de', 'es', 'fr', 'hu', 'id', 'it', 'jv', 'new', 'bo', 'pl', 'pt',
-        'sv', 'sw', 'tr', 'tt', 'ky', 'cs',
+        'sv', 'sw', 'tr', 'tt', 'ky', 'cs', 'yue', 'nan', 'wuu',
     ]
+
+    # Manual entries for Chinese-script locales that Babel cannot look up by locale code
+    t.setdefault('yue', {}).setdefault('nan', '閩南語')
+    t.setdefault('nan', {}).setdefault('nan', '閩南語')
+    t.setdefault('wuu', {}).setdefault('nan', '閩南語')
+    # Fallback 'uz' for locales Babel does not support
+    zh_loc = get_babel_locale('zh')
+    zh_uz = zh_loc.languages.get('uz') if zh_loc else None
+    if zh_uz:
+        for lc in ('nan', 'wuu'):
+            t.setdefault(lc, {}).setdefault('uz', f'{capitalize_initial_letter(zh_uz)} ({ns["uz"]})')
+
     for locale in partial_locales:
         replacements = t.setdefault(locale, {})
         for lang in LANG_ORDER:
@@ -4063,7 +4095,8 @@ def ensure_footer_links(content, locale):
             existing['en'] = text
         else:
             m2 = re.match(r'index-([^.]+)\.html', href)
-            if m2:
+            # Skip self-referencing full links (e.g. index-uz.html inside uz page)
+            if m2 and m2.group(1) != locale:
                 existing[m2.group(1)] = text
 
     missing = [lang for lang in LANG_ORDER if lang != locale and lang not in existing]
@@ -4167,11 +4200,11 @@ def main():
         'ar', 'bn', 'el', 'eu', 'fa', 'he', 'hi', 'ja', 'ko', 'nl', 'or', 'pa',
         'ru', 'si', 'ta', 'th', 'vi', 'zh', 'ur', 'hy',
         'de', 'es', 'fr', 'hu', 'id', 'it', 'jv', 'new', 'bo', 'pl', 'pt',
-        'sv', 'sw', 'tr', 'tt', 'ky', 'cs',
+        'sv', 'sw', 'tr', 'tt', 'ky', 'cs', 'yue', 'nan', 'wuu',
     ]
     # Locales already fully translated whose footers only need link-insertion if new
     # languages are added (en is the source of truth).
-    ensure_only_locales = ['en', 'yue']
+    ensure_only_locales = ['en']
 
     print('\nProcessing full-replacement files...')
     for locale in FULL_REPLACE_LOCALES:
